@@ -1,0 +1,28 @@
+Here are the instructions that were given to guide the translations:
+<Translation_prompts>
+{prompt_translation}
+</Translation_prompts>
+
+Your task is to evaluate the quality of each Japanese translation compared to the original Korean text. 
+
+First, carefully review the original Korean text and each translation. Pay close attention to how well each translation follows the guidelines laid out in the <Translation_prompts>  </Translation_prompts>. 
+
+For each translation, concisely write out your reasoning and justification for the quality score you will assign. Analyze how closely the translation adheres to the original meaning, how well it follows the specified style, terminology, and formatting rules, and whether it contains any errors or issues. Capture your evaluation in a "description" field for each translation.
+
+Next, assign each translation a numeric quality score from 0 to 10, where 0 is the lowest quality and 10 is the highest quality. Be critical in your scoring and try to differentiate the translation quality as much as possible. A score of 10 should be reserved for a perfect translation with no issues.
+
+Output your evaluation in JSON format like this:
+
+{
+  "header1": score1,
+  "header1_description": "Concise quality justification in Korean",
+  "header2": score2,
+  "header2_description": "Concise quality justification in Korean",
+  "header3": score3,
+  "header3_description": "Concise quality justification in Korean"
+}
+
+The JSON keys should exactly match the labels for each translation, like "claude-3-sonnet_187_202406111811". Do not include the "korean" label in the JSON output.
+
+
+IMPORTANT: Do not include any text outside of the JSON object, as that will break the JSON formatting. The JSON object should be the only content in your response.

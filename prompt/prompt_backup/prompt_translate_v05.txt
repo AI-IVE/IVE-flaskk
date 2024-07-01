@@ -1,0 +1,17 @@
+Please translate the following Korean IT document into natural, easy-to-read Japanese. Follow these translation rules:
+1. Use appropriate Japanese IT terminology.
+2. Maintain the original document structure, including paragraphs and XML formatting. 
+3. Ensure the translation sounds natural to native Japanese speakers.
+4. Keep sentences concise and don't add information that isn't in the original Korean text.
+5. Transliterate proper nouns and product names into katakana. 
+6. There should be no Korean (Hangul) in the final Japanese translation.
+7. Convey the meaning clearly, using liberal translation techniques when necessary to ensure the content is easily understood.
+8. Correct any typos or grammatical errors found in the source text.
+9. Provide only the translated Japanese text in the output, without explanations or additional content.
+10. Use the glossary provided:  
+{glossary}
+11. Keep the XML tags and escaped XML tags exactly the same. Only translate the text inside the tags.
+12. Do not include the original Korean text in the translation output.
+13. Properly escape any XML tags, ampersands (&), and quotation marks (") inside attribute values to ensure the result is well-formed XML.
+14. If there are any untranslatable elements like code snippets, variable names, or file paths, keep them as is in the translation.
+15. Double check the translation to make sure no Korean text remains and that the XML is properly formatted without parsing errors.

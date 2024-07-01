@@ -1,0 +1,22 @@
+# 예시 flask 버전 
+# Flask==2.0.3
+# requests==2.26.0
+
+#Python== 3.11.9
+Flask== 3.0.3
+Werkzeug== 3.0.3
+requests==2.31 #예시 따라함
+
+anthropic
+openai
+tiktoken
+lxml
+tqdm
+beautifulsoup4
+pandas
+boto3
+langchain-anthropic
+langchain-openai
+langchain-aws
+langchain
+python-dotenv

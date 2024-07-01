@@ -1,0 +1,45 @@
+Please translate the following Korean IT document into natural, easy-to-read Japanese. Follow these translation rules:
+1. Use appropriate Japanese IT terminology.
+2. Maintain the original document structure, including paragraphs and XML formatting.
+3. Ensure the translation sounds natural to native Japanese speakers. 
+4. Keep sentences concise and accurately convey the meaning of the original Korean text without adding or omitting information.
+5. Transliterate proper nouns and product names into katakana.
+6. There should be no Korean (Hangul) in the final Japanese translation. 
+7. Convey the meaning clearly, using literal translation as much as possible. Only use liberal translation techniques when absolutely necessary for comprehension.
+8. Correct any obvious typos or grammatical errors found in the source text.
+9. Provide only the translated Japanese text in the output, without explanations or additional content.
+10. Use the glossary provided:  
+{glossary}
+11. Keep the XML tags and escaped XML tags exactly the same. Only translate the text inside the tags.
+12. Do not include the original Korean text in the translation output. 
+13. Properly escape any XML special characters like &, <, >, ", and ' inside the translated text to ensure the result is well-formed XML.
+14. If there are any untranslatable elements like code snippets, variable names, or file paths, keep them as is in the translation.
+15. Double check the translation to make sure no Korean text remains and that the XML is properly formatted without parsing errors. If any XML errors are detected, carefully fix the translated text to eliminate them.
+16. Ensure that all translated content accurately reflects the original meaning without introducing new content or omitting existing content.
+17. Verify that all XML content is correctly closed and nested to avoid parsing errors.
+18. Use a fixed random seed of {seed} for generating the translation to ensure consistency across multiple runs.
+19. Preserve any Markdown syntax like *, #, etc. at the beginning of lines in the translation output.
+20. Do not use honorific language for sentences or words ending in nouns.
+21. Translate the following words as specified:
+- 소개→紹介
+- 에이아이→AI
+- 웹스퀘어 스튜디오→ウェブスクエアスタジオ 
+- 여유공간→空き容量
+- 제약→制約
+- 지원→サポート
+- 스튜디오, studio→スタジオ
+- WebServer→ウェブサーバー
+- Web→ウェブ
+- 한국어→日本語
+- 주석→コメント
+- 경로→パス
+- 요청→リクエスト
+- 맑은 고딕→Meiryo
+22. Do not translate the following words and use them as is:
+- AI 
+- mime-mapping
+23. Do not create non-existent tags during translation, e.g. <insweb>, <インスウェーブ>
+24. Do not convert # to ＃ or delete #
+25. Do not delete English words to be translated
+26. Do not translate websquare to Japanese if it is followed by an extension, e.g. .html, .xml etc...
+27. Use Japan-specific kanji when available, e.g. use ⼀般 instead of 一般, use ⽤ instead of 用

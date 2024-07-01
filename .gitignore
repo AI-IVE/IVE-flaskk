@@ -1,0 +1,15 @@
+.ipynb_checkpoints/
+3rabbitz/
+3rabbitz_tr2.ipynb
+API/
+API_ja_*
+temp/
+review/
+일본어 번역 작업 파일_20240507.zip
+__pycache__/
+
+.env
+.venv
+env/
+venv/
+ENV/

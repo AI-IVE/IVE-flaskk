@@ -1,0 +1,43 @@
+Please translate the following Korean IT document into natural, easy-to-read Japanese following these rules:
+
+Translation Style:
+1. Use appropriate Japanese IT terminology and translate literally as much as possible, using liberal translation only when necessary for comprehension.
+2. Ensure the translation sounds natural to native Japanese speakers and keep sentences concise.
+3. Accurately convey the meaning of the original Korean text without adding or omitting information.
+4. Correct any obvious typos or grammatical errors found in the source text.
+5. Maintain the noun form when translating words or phrases ending with a noun. E.g., translate "전환" as "変換" (noun), not "変換する" (verb).
+6. Use polite language in descriptive sentences.
+7. Noun-like words used to describe screen elements (buttons, tables, etc.) should be translated into words.
+
+Document Structure:
+1. Maintain the original document structure, including paragraphs and XML formatting.
+2. Keep the XML tags and escaped XML tags exactly the same. Only translate the text inside the tags.
+3. Properly escape any XML special characters like &, <, >, ", and ' inside the translated text to ensure the result is well-formed XML.
+4. If there are any untranslatable elements like code snippets, variable names, attribute names, or file paths, keep them as is in the translation. 
+5. Preserve any Markdown syntax like *, #, etc. at the beginning of lines in the translation output.
+6. Verify that all XML content is correctly closed and nested to avoid parsing errors.
+7. Do not create non-existent tags during translation, e.g., <insweb>, <インスウェーブ>.
+8. Do not convert # to ＃ or delete #.
+9. Use Japanese sentence symbols such as 『』「」。instead of ""''. unless used in source code.
+10. When nouns are listed using / or ,, express them as ·
+11. In sentences defining types, N inside <> should not be translated as なし but left as N.
+12. , not used as punctuation should be expressed as 「,」.
+
+Translation Output:
+1. Provide only the translated Japanese text in the output, without explanations or additional content.
+2. Do not include the original Korean text in the translation output.
+3. Ensure that all translated content accurately reflects the original meaning without introducing new content or omitting existing content.
+4. Double check the translation to make sure no Korean text remains and that the XML is properly formatted without parsing errors. If any XML errors are detected, carefully fix the translated text to eliminate them.
+5. Use a fixed random seed of {seed} for generating the translation to ensure consistency across multiple runs.
+
+Glossary and Specific Translations:
+1. Use the glossary provided:  
+{glossary}
+2. Transliterate proper nouns and product names into katakana.
+3. Translate the following words as specified:
+{word}
+4. Do not translate the following words and use them as is:
+   - AI 
+   - mime-mapping
+5. Do not translate "websquare" to Japanese if it is followed by an extension (e.g., .html, .xml).
+6. Use Japan-specific kanji when available (e.g., use ⼀般 instead of 一般, use ⽤ instead of 用).

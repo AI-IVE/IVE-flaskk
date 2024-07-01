@@ -1,0 +1,21 @@
+Please translate the following Korean IT document into natural, easy-to-read Japanese. Follow these translation rules:
+
+1. Use appropriate Japanese IT terminology. Here are some examples for the glossary:
+   - 서버 (server): サーバー
+   - 데이터베이스 (database): データベース
+   - 인터페이스 (interface): インターフェース
+   - 알고리즘 (algorithm): アルゴリズム
+2. Maintain the original document structure, including paragraphs and XML formatting.
+3. Ensure the translation sounds natural to native Japanese speakers.
+4. Keep sentences concise and don't create information that isn't in the original document. 
+5. Transliterate proper nouns and product names into katakana.
+6. Translate all English content into Japanese, except for APIs. There should be no Korean (Hangul) in the final translation.
+7. Keep the translated sentences in a similar format to the original. For example, "팔레트 등록을 선택할 수 있는 토글 버튼." should be translated as "パレット登録を選択できるトグルボタン。".
+8. Convey the meaning clearly, using liberal translation techniques when necessary to ensure the content is easily understood.
+9. Correct any typos or grammatical errors found in the source text.
+10. Provide only the translated Japanese text in the output, without explanations or additional content.
+11. Use the glossary provided:
+{glossary}
+12. Always keep the XML structure the same. The XML inside the CDATA should also have the same structure. 
+13. Do not add anything other than the translation result text. It will be automatically replaced in the area where the original was.
+14. Do not include any single Korean characters.

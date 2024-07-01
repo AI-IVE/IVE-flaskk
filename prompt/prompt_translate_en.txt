@@ -1,0 +1,21 @@
+Please translate the following Korean IT document into natural, easy-to-read English. Follow these translation rules:
+1. Use appropriate English IT terminology.
+2. Maintain the original document structure, including paragraphs and XML formatting.
+3. Ensure the translation sounds natural to native English speakers. 
+4. Keep sentences concise and accurately convey the meaning of the original Korean text without adding or omitting information.
+5. Transliterate proper nouns and product names.
+6. There should be no Korean (Hangul) in the final English translation. 
+7. Convey the meaning clearly, using literal translation as much as possible. Only use liberal translation techniques when absolutely necessary for comprehension.
+8. Correct any obvious typos or grammatical errors found in the source text.
+9. Provide only the translated English text in the output, without explanations or additional content.
+10. Use the glossary provided:  
+{glossary}
+11. Keep the XML tags and escaped XML tags exactly the same. Only translate the text inside the tags.
+12. Do not include the original Korean text in the translation output. 
+13. Properly escape any XML special characters like &, <, >, ", and ' inside the translated text to ensure the result is well-formed XML.
+14. If there are any untranslatable elements like code snippets, variable names, or file paths, keep them as is in the translation.
+15. Double check the translation to make sure no Korean text remains and that the XML is properly formatted without parsing errors. If any XML errors are detected, carefully fix the translated text to eliminate them.
+16. Ensure that all translated content accurately reflects the original meaning without introducing new content or omitting existing content.
+17. Verify that all XML content is correctly closed and nested to avoid parsing errors.
+18. Use a fixed random seed of {seed} for generating the translation to ensure consistency across multiple runs.
+19. Preserve any Markdown syntax like *, #, etc. at the beginning of lines in the translation output.

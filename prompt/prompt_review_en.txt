@@ -1,0 +1,24 @@
+Compare the quality of the following translated documents. The original documents are embedded between <korean> </korean>, and the translated documents are embedded between XML tags consisting of the LLM model name, seed number, and generation time. Provide a score for each translation from 0 to 10, where 0 represents the lowest quality and 10 represents the highest quality. Focus on assessing the fluency, accuracy, and naturalness of the translations. Be more critical in your evaluation to allow for greater differentiation between the translation qualities. Output the scores in JSON format with keys matching the exact headers used for each translation, excluding the "korean" header which represents the original text. Do not include any headers in the JSON output that are not present in the translation examples. JSON keys cannot contain <, >. Do not include any content outside the JSON object. No explanation is needed.
+
+Translated documents format:
+<korean>
+
+</korean>
+<header1>
+
+</header1>
+<header2>
+
+</header2>
+
+JSON format:
+{
+"header1": score1,
+"header2": score2,
+"header3": score3
+}
+
+Here are the prompts we used for translation
+<Translation prompts>
+{prompt_translation}
+</Translation prompts>
