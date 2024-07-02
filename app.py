@@ -4,6 +4,7 @@ import config
 import hashlib
 import hmac
 import time
+from flask_cors import CORS
 
 import utils
 import prompt
@@ -11,6 +12,7 @@ import dotenv
 dotenv.load_dotenv(dotenv.find_dotenv())
 
 app = Flask(__name__)
+CORS(app)
 
 
 
@@ -30,7 +32,9 @@ def remove_first_sentence(text):
 @app.route('/translate', methods=['GET', 'POST'])
 def translate():
     seed_number = "187"  # 기존값 187 81 20 17 
-    system_prompt_translate, system_prompt_review, glossary, word_list = utils.load_prompt(seed_number, lang="ja")
+    
+    
+    
     
     if request.method == 'POST':
         data = request.json
@@ -44,7 +48,13 @@ def translate():
 
     if not korean_text:
         return jsonify({"error": "No text provided"}), 400
-
+    
+    lang = utils.get_language(korean_text) 
+    # lang =  "ja" if lang == "jp" else lang
+    # print(lang,"lang===========")
+    return_lang = "ko" if lang == "jp" else "jp"
+    system_prompt_translate, system_prompt_review, glossary, word_list = utils.load_prompt(seed_number, lang="ja")
+    
 
 
     try:
@@ -55,7 +65,7 @@ def translate():
         else:
             return jsonify({"error": "Invalid model specified"}), 400
 
-        return jsonify({"translation": translation})
+        return jsonify({"translation": translation,"return_lang":return_lang})
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 

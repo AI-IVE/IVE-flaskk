@@ -21,6 +21,26 @@ from langchain.callbacks.tracers import LangChainTracer
 client_anthropic = anthropic.Anthropic()
 client_openai = openai.OpenAI()
 
+
+def get_language(text):
+    systemPrompt = """사용자의 메시지를 분석하여 사용된 언어가 한국어인 경우 'ko', 일본어인 경우 'jp', 영어인 경우 'en'으로만 응답하세요. 다른 설명이나 추가 텍스트 없이 해당 코드만 출력하세요.
+                    사용자 질문 : """
+    userprompt = text
+                    
+    completion = client_openai .chat.completions.create(
+    model="gpt-4o-2024-05-13",
+    messages=[
+        {"role": "system", "content": systemPrompt},
+        {"role": "user", "content": userprompt}
+    ]
+
+    )
+    print(completion.choices[0].message.content)
+    return completion.choices[0].message.content
+    
+
+
+
 def clean_text(text):
     # print('clean_text[IN]:',text)
     if text is None:
@@ -786,12 +806,13 @@ def load_prompt(seed_number, lang="jp"):
 
     glossary = ''.join('   ' + line for line in glossary_lines)
 
+    
     with open(f"./prompt/prompt_word_{lang}.txt", "r", encoding="utf-8") as file:
         word_list_lines = file.readlines()
 
     word_list = ''.join('   ' + line for line in word_list_lines)
 
-    with open(f"./prompt/prompt_translate_{lang}.txt", "r", encoding="utf-8") as file:
+    with open(f"./prompt/prompt_translate1_{lang}.txt", "r", encoding="utf-8") as file:
         system_prompt_translate = file.read()
 
     system_prompt_translate = system_prompt_translate.replace("{glossary}", glossary)
