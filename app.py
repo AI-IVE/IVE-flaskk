@@ -15,12 +15,10 @@ app = Flask(__name__)
 CORS(app)
 
 
-
-
 def remove_first_sentence(text):
     # \n\n을 기준으로 문자열을 분할합니다
     parts = text.split('\n\n', 1)
-    print("remove_first_sentence- parts",parts)
+    
     # 분할된 부분이 2개 이상이면 (즉, \n\n이 존재하면)
     if len(parts) > 1:
         # 두 번째 부분부터 끝까지 반환합니다
@@ -58,7 +56,7 @@ def translate():
         if model.lower() == 'gpt4':
             translation = remove_first_sentence ( utils.api_openai_native(system_prompt_translate, text,"gpt-4o") )
         elif model.lower() == 'claude':
-            translation = remove_first_sentence ( utils.api_claude_native(system_prompt_translate, text,"claude-3.5-sonnet") )
+            translation = remove_first_sentence ( utils.api_claude_native(system_prompt_translate, text ) )
         else:
             return jsonify({"error": "Invalid model specified"}), 400
 
