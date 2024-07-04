@@ -20,7 +20,7 @@ CORS(app)
 def remove_first_sentence(text):
     # \n\n을 기준으로 문자열을 분할합니다
     parts = text.split('\n\n', 1)
-    
+    print("remove_first_sentence- parts",parts)
     # 분할된 부분이 2개 이상이면 (즉, \n\n이 존재하면)
     if len(parts) > 1:
         # 두 번째 부분부터 끝까지 반환합니다
@@ -33,35 +33,32 @@ def remove_first_sentence(text):
 def translate():
     seed_number = "187"  # 기존값 187 81 20 17 
     
-    
-    
-    
     if request.method == 'POST':
         data = request.json
-        korean_text = data.get('text')
+        text = data.get('text')
         model = data.get('model', 'gpt4')  # 기본값은 'gpt4'
     elif request.method == 'GET':
-        korean_text = request.args.get('text')
+        text = request.args.get('text')
         model = request.args.get('model', 'gpt4')  # 기본값은 'gpt4'
     else:
         return jsonify({"error": "Method not allowed"}), 405
 
-    if not korean_text:
+    if not text:
         return jsonify({"error": "No text provided"}), 400
     
-    lang = utils.get_language(korean_text) 
+    lang = utils.get_language(text) 
     # lang =  "ja" if lang == "jp" else lang
     # print(lang,"lang===========")
     return_lang = "ko" if lang == "jp" else "jp"
-    system_prompt_translate, system_prompt_review, glossary, word_list = utils.load_prompt(seed_number, lang="ja")
+    system_prompt_translate = utils.load_prompt(seed_number, lang="ja")
     
 
 
     try:
         if model.lower() == 'gpt4':
-            translation = remove_first_sentence ( utils.api_openai(system_prompt_translate, korean_text) )
+            translation = remove_first_sentence ( utils.api_openai_native(system_prompt_translate, text,"gpt-4o") )
         elif model.lower() == 'claude':
-            translation = remove_first_sentence ( utils.api_claude_native(system_prompt_translate, korean_text) )
+            translation = remove_first_sentence ( utils.api_claude_native(system_prompt_translate, text,"claude-3.5-sonnet") )
         else:
             return jsonify({"error": "Invalid model specified"}), 400
 

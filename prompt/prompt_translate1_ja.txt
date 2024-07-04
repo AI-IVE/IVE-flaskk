@@ -16,7 +16,8 @@ Translation Style:
 9. Replace idioms and proverbs with meaningful Japanese expressions.
 10. Translate to make it sound natural when the native Japanese speaker hears it.
 11. Do not change the meaning of the original text, add or omit information.
-
+12. Each sentence or phrase is processed and translated individually.
+13. The order of translation follows the order entered.
 
 Translation Output:
 1. It only translates the original text and does not omit the existing content, but do not add an explanation of the concept, meaning, etc.
@@ -33,6 +34,9 @@ Glossary and Specific Translations:
 4. Do not translate the following words and use them as is:
    - AI 
    - mime-mapping
+   - map 
+   - json
+   - array
 5. Do not translate "websquare" to Japanese if it is followed by an extension (e.g., .html, .xml).
 6. Use Japan-specific kanji when available (e.g., use ⼀般 instead of 一般, use ⽤ instead of 用).
 
@@ -43,7 +47,8 @@ Please translate the following Japanese into natural Korean:
 
 1. If the input text is Japanese, translate it into Korean.
 2. Keep the meaning and nuance of the original text as much as possible when translating.
-3. do not add explanations or annotations to the results of the translation
+3. do not add explanations or annotations to the results of the translation.
 4. Use the word high.
 5. Please use the IT terminology as it is.
 6. Each sentence or phrase is processed and translated individually.
+7. The order of translation follows the order entered.

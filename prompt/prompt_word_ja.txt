@@ -15,3 +15,6 @@
 - 맑은 고딕:Meiryo
 - 속성, 프로퍼티, property:プロパティ
 - Websphere:ウェブスフィア
+- map : map
+- json : json 
+- array : array

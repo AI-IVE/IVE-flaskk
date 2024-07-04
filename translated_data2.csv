@@ -1,0 +1,3012 @@
+idx,topic_title,topic_content,topic_reply_main,topic_reply_re,gpt_trans,claude_trans,gpt_trans_jp_ko,claude_trans_jp_ko
+1,gridview의 setColumnVisibleColumn api 질문4,"<< 개요 >>
+
+( 기능 문의의 경우 해당 기능의 사용 용도와 목적을 구체적으로 기술해 주시기 바랍니다. )
+
+해당 api를 사용하는데 
+감추려는 컬럼을 3줄로 입력하였는데 마지막 줄만 적용이 됐습니다
+인덱스가 0-5 인데 
+여러건을 감출수는 없나요?
+
+<< 재현 방법 >>
+
+( 재현이 쉽도록 순서를 명시하여 주시면 좋습니다. 관련 소스는 가급적 첨부파일로 올려 주시기 바랍니다.)
+
+
+
+","안녕하세요.
+
+gridView setColumnVisibleColumn(); API 관련하여 테스트 파일 첨부드립니다.
+inputType=""select""에 바인딩 된 dataList type 컬럼 true인 값들을 visible 처리한 테스트 파일입니다.
+
+확인부탁드립니다.
+감사합니다.",,"<< 概要 >>
+
+( 機能に関する問い合わせの場合、その機能の使用用途と目的を具体的に記述してください。)
+
+該当のAPIを使用して、隠したいカラムを3行入力しましたが、最後の行だけが適用されました。
+インデックスが0-5ですが、複数の項目を隠すことはできないのでしょうか？
+
+<< 再現方法 >>
+
+( 再現が容易になるように順序を明示してください。関連ソースは可能な限り添付ファイルとしてアップロードしてください。)","<< 概要 >>
+
+（機能に関するお問い合わせの場合は、その機能の使用目的と目的を具体的に記述してください。）
+
+該当APIを使用する際に、
+非表示にしたい列を3行で入力しましたが、最後の行だけが適用されました。
+インデックスが0-5の場合、
+複数の項目を非表示にすることはできないのでしょうか？
+
+<< 再現方法 >>
+
+（再現しやすいように順序を明記していただけると助かります。関連するソースコードは可能な限り添付ファイルでアップロードしてください。）","<< 개요 >>
+
+( 기능에 관한 문의의 경우, 해당 기능의 사용 용도와 목적을 구체적으로 기재해 주세요.)
+
+해당 API를 사용하여 숨기고 싶은 컬럼을 3행 입력했지만, 마지막 행만 적용되었습니다.
+인덱스가 0-5인데, 여러 항목을 숨길 수 없는 건가요?
+
+<< 재현 방법 >>
+
+( 재현이 용이하도록 순서를 명시해 주세요. 관련 소스는 가능한 한 첨부 파일로 업로드해 주세요.)","다음은 일본어를 한국어로 번역한 결과입니다:
+
+<< 개요 >>
+
+(기능에 관한 문의의 경우, 해당 기능의 사용 목적과 목적을 구체적으로 기술해 주십시오.)
+
+해당 API를 사용할 때,
+숨기고 싶은 열을 3행으로 입력했지만, 마지막 행만 적용되었습니다.
+인덱스가 0-5인 경우,
+여러 항목을 숨기는 것은 불가능한 것인가요?
+
+<< 재현 방법 >>
+
+(재현하기 쉽도록 순서를 명기해 주시면 감사하겠습니다. 관련된 소스 코드는 가능한 한 첨부 파일로 업로드해 주십시오.)"
+2,[gridView] groupBy() 후 엑셀 다운로드1,,"안녕하십니까!
+
+그리드 groupby시 엑셀 다운로드를 할때는
+옵션에 groupby=''true' 를 추가해 주시면 될거 같습니다.
+
+-------------------------------------------------------------
+  var options = {};
+  options.fileName = ""excelData.xlsx"";
+  //그리드 그룹바이 옵션 추가
+  options.groupby = ""true"";
+  
+  gridView1.advancedExcelDownload( options );
+-------------------------------------------------------------
+
+소스상에서 공통함수 ef.gridDataDownLoad 함수 안에서 추가해 주신 
+groupby 옵션이 잘 셋팅이 되는지 확인을 해보시기 바랍니다.
+
+그리고 groupby 옵션도 이상이 없는지 확인해 보시면 될거 같습니다.
+
+간단한 테스트 샘플을 첨부 전달드립니다.
+
+감사합니다.
+
+
+감사합니다.
+ ",,,,,
+3,DataList 데이터를 Gridview로 보여줄 때 행과 열 변경하는 방법 문의3,"<< 개요 >>
+
+간단하게 예시를 하나 들겠습니다.
+[
+    {'id': 'testID1', name: 'testName1', cont1: 'testCont1-1', cont2: 'testCont2-1'},
+    {'id': 'testID2', name: 'testName2', cont1: 'testCont1-2', cont2: 'testCont2-2'},
+    {'id': 'testID3', name: 'testName3', cont1: 'testCont1-3', cont2: 'testCont2-3'},
+    {'id': 'testID4', name: 'testName4', cont1: 'testCont1-4', cont2: 'testCont2-4'},
+    {'id': 'testID5', name: 'testName5', cont1: 'testCont1-5', cont2: 'testCont2-5'},
+    {'id': 'testID6', name: 'testName6', cont1: 'testCont1-6', cont2: 'testCont2-6'},
+]
+
+이런 데이터를 DataList에 담았습니다.
+그리고 저는 gridview로 이렇게 그리고 싶습니다.
+    testName1 testName2 testName3 testName4 testName5 testName6
+ID testID1 testID2 testID3 testID4 testID5 testID6
+CONT1 testCont1-1 testCont1-2 testCont1-3 testCont1-4 testCont1-5 testCont1-6
+CONT2 testCont2-1 testCont2-2 testCont2-3 testCont2-4 testCont2-5 testCont2-6
+
+일반적인 gridview로 datalist에 세팅 후 그릴 때는 위쪽 header엔 해당datalist의 key가 세팅되어 row단위로 데이터가 세팅되는데 전 컬럼 단위로 세팅되게 하고 싶습니다.
+
+방법이 있다면 알려주셨으면 합니다.
+
+
+
+<< 재현 방법 >>
+
+( 재현이 쉽도록 순서를 명시하여 주시면 좋습니다. 관련 소스는 가급적 첨부파일로 올려 주시기 바랍니다.)
+
+
+
+","안녕하세요.
+
+말씀해주신 컬럼 단위로 설정하는 방법은 지원하지않습니다.
+
+감사합니다.",,"<< 概要 >>
+
+簡単に例を一つ挙げます。
+[
+    {'id': 'testID1', name: 'testName1', cont1: 'testCont1-1', cont2: 'testCont2-1'},
+    {'id': 'testID2', name: 'testName2', cont1: 'testCont1-2', cont2: 'testCont2-2'},
+    {'id': 'testID3', name: 'testName3', cont1: 'testCont1-3', cont2: 'testCont2-3'},
+    {'id': 'testID4', name: 'testName4', cont1: 'testCont1-4', cont2: 'testCont2-4'},
+    {'id': 'testID5', name: 'testName5', cont1: 'testCont1-5', cont2: 'testCont2-5'},
+    {'id': 'testID6', name: 'testName6', cont1: 'testCont1-6', cont2: 'testCont2-6'},
+]
+
+このようなデータをDataListに入れました。
+そして私はgridviewでこのように描きたいです。
+    testName1 testName2 testName3 testName4 testName5 testName6
+ID testID1 testID2 testID3 testID4 testID5 testID6
+CONT1 testCont1-1 testCont1-2 testCont1-3 testCont1-4 testCont1-5 testCont1-6
+CONT2 testCont2-1 testCont2-2 testCont2-3 testCont2-4 testCont2-5 testCont2-6
+
+一般的なgridviewでdatalistに設定後描くときは、上部のヘッダーに該当datalistのkeyが設定され、行単位でデータが設定されますが、私は列単位で設定されるようにしたいです。
+
+方法があれば教えていただけますか。
+
+
+
+<< 再現方法 >>
+
+(再現が容易になるように順序を明示していただけると助かります。関連ソースは可能な限り添付ファイルでアップロードしてください。)","<< 概要 >>
+
+簡単に例を一つ挙げます。
+[
+    {'id': 'testID1', name: 'testName1', cont1: 'testCont1-1', cont2: 'testCont2-1'},
+    {'id': 'testID2', name: 'testName2', cont1: 'testCont1-2', cont2: 'testCont2-2'},
+    {'id': 'testID3', name: 'testName3', cont1: 'testCont1-3', cont2: 'testCont2-3'},
+    {'id': 'testID4', name: 'testName4', cont1: 'testCont1-4', cont2: 'testCont2-4'},
+    {'id': 'testID5', name: 'testName5', cont1: 'testCont1-5', cont2: 'testCont2-5'},
+    {'id': 'testID6', name: 'testName6', cont1: 'testCont1-6', cont2: 'testCont2-6'},
+]
+
+このようなデータをDataListに格納しました。
+そして、私はgridviewでこのように描画したいです。
+    testName1 testName2 testName3 testName4 testName5 testName6
+ID testID1 testID2 testID3 testID4 testID5 testID6
+CONT1 testCont1-1 testCont1-2 testCont1-3 testCont1-4 testCont1-5 testCont1-6
+CONT2 testCont2-1 testCont2-2 testCont2-3 testCont2-4 testCont2-5 testCont2-6
+
+一般的なgridviewでdatalistにセット後に描画する際は、上部のヘッダーには該当datalistのkeyがセットされ、行単位でデータがセットされますが、私は列単位でセットされるようにしたいです。
+
+方法があれば教えていただきたいです。
+
+<< 再現方法 >>
+
+（再現が容易になるよう、順序を明記していただけると助かります。関連ソースはできるだけ添付ファイルでアップロードしてください。）","<< 개요 >>
+
+간단히 예를 하나 들겠습니다.
+[
+    {'id': 'testID1', name: 'testName1', cont1: 'testCont1-1', cont2: 'testCont2-1'},
+    {'id': 'testID2', name: 'testName2', cont1: 'testCont1-2', cont2: 'testCont2-2'},
+    {'id': 'testID3', name: 'testName3', cont1: 'testCont1-3', cont2: 'testCont2-3'},
+    {'id': 'testID4', name: 'testName4', cont1: 'testCont1-4', cont2: 'testCont2-4'},
+    {'id': 'testID5', name: 'testName5', cont1: 'testCont1-5', cont2: 'testCont2-5'},
+    {'id': 'testID6', name: 'testName6', cont1: 'testCont1-6', cont2: 'testCont2-6'},
+]
+
+이러한 데이터를 DataList에 넣었습니다.
+그리고 저는 gridview에서 이렇게 그리고 싶습니다.
+    testName1 testName2 testName3 testName4 testName5 testName6
+ID testID1 testID2 testID3 testID4 testID5 testID6
+CONT1 testCont1-1 testCont1-2 testCont1-3 testCont1-4 testCont1-5 testCont1-6
+CONT2 testCont2-1 testCont2-2 testCont2-3 testCont2-4 testCont2-5 testCont2-6
+
+일반적인 gridview에서 datalist에 설정 후 그릴 때는, 상단의 헤더에 해당 datalist의 key가 설정되고, 행 단위로 데이터가 설정되지만, 저는 열 단위로 설정되도록 하고 싶습니다.
+
+방법이 있으면 알려주시겠습니까?
+
+
+
+<< 재현 방법 >>
+
+(재현이 용이하도록 순서를 명시해 주시면 도움이 됩니다. 관련 소스는 가능한 한 첨부 파일로 업로드해 주십시오.)","<< 개요 >>
+
+간단히 예를 하나 들겠습니다.
+[
+    {'id': 'testID1', name: 'testName1', cont1: 'testCont1-1', cont2: 'testCont2-1'},
+    {'id': 'testID2', name: 'testName2', cont1: 'testCont1-2', cont2: 'testCont2-2'},
+    {'id': 'testID3', name: 'testName3', cont1: 'testCont1-3', cont2: 'testCont2-3'},
+    {'id': 'testID4', name: 'testName4', cont1: 'testCont1-4', cont2: 'testCont2-4'},
+    {'id': 'testID5', name: 'testName5', cont1: 'testCont1-5', cont2: 'testCont2-5'},
+    {'id': 'testID6', name: 'testName6', cont1: 'testCont1-6', cont2: 'testCont2-6'},
+]
+
+이와 같은 데이터를 DataList에 저장했습니다.
+그리고 저는 gridview에서 이렇게 렌더링하고 싶습니다.
+    testName1 testName2 testName3 testName4 testName5 testName6
+ID testID1 testID2 testID3 testID4 testID5 testID6
+CONT1 testCont1-1 testCont1-2 testCont1-3 testCont1-4 testCont1-5 testCont1-6
+CONT2 testCont2-1 testCont2-2 testCont2-3 testCont2-4 testCont2-5 testCont2-6
+
+일반적인 gridview에서 datalist에 설정 후 렌더링할 때는 상단 헤더에 해당 datalist의 key가 설정되고, 행 단위로 데이터가 설정되지만, 저는 열 단위로 설정되도록 하고 싶습니다.
+
+방법이 있다면 알려주시면 감사하겠습니다.
+
+<< 재현 방법 >>
+
+(재현이 쉽도록 순서를 명시해 주시면 도움이 됩니다. 관련 소스는 가능한 첨부 파일로 업로드해 주세요.)"
+4,gridView fixedColumn 문의1,"<< 개요 >>
+
+gridView 에 바인딩하는 10개의 컬럼중 앞에 3개의 컬럼과 뒤에 3개의 컬럼을 고정하고 싶은데 방법이 있는지 문의 드립니다.
+
+
+
+<< 재현 방법 >>
+
+( 재현이 쉽도록 순서를 명시하여 주시면 좋습니다. 관련 소스는 가급적 첨부파일로 올려 주시기 바랍니다.)
+
+
+
+","안녕하세요.
+
+해당 gridView에 fixedColumn, fixedRightColumn 속성을 설정해주시면 됩니다.
+
+// 속성 설정 예시
+<w2:gridView fixedColumn=""3"" fixedRightColumn=""3"" ....
+
+추가로 프로젝트명 기입 부탁드립니다.
+감사합니다.",,"<< 概要 >>
+
+gridViewにバインドする10個のカラムのうち、前の3つのカラムと後ろの3つのカラムを固定したいのですが、方法があるかどうかお問い合わせします。
+
+
+
+<< 再現方法 >>
+
+（再現が簡単になるように順序を明示していただけると助かります。関連ソースはできるだけ添付ファイルでアップロードしてください。）","<< 概要 >>
+
+gridViewにバインドする10個のカラムのうち、前の3つのカラムと後ろの3つのカラムを固定したいのですが、その方法について問い合わせいたします。
+
+<< 再現方法 >>
+
+（再現しやすいように順序を明記していただけると助かります。関連するソースコードは可能な限り添付ファイルでアップロードしていただけますようお願いいたします。）","<< 개요 >>
+
+gridView에 바인딩된 10개의 컬럼 중, 앞의 3개 컬럼과 뒤의 3개 컬럼을 고정하고 싶은데, 방법이 있는지 문의드립니다.
+
+
+
+<< 재현 방법 >>
+
+(재현이 간단해지도록 순서를 명시해 주시면 도움이 됩니다. 관련 소스는 가능한 첨부 파일로 업로드해 주세요.)","<< 개요 >>
+
+gridView에 바인딩하는 10개의 컬럼 중 앞쪽 3개 컬럼과 뒤쪽 3개 컬럼을 고정하고 싶은데, 그 방법에 대해 문의드립니다.
+
+<< 재현 방법 >>
+
+(재현하기 쉽도록 순서를 명시해 주시면 감사하겠습니다. 관련 소스 코드는 가능한 한 첨부 파일로 업로드해 주시기 바랍니다.)"
+5,gridview 헤더에 filter 변경 시 이벤트 캐치 방법1,"<< 개요 >>
+
+안녕하세요. 
+
+gridview 에서 useflterlist를 이용해서 헤더에 filter를 사용하고 있습니다. 
+
+현재 그리드에 조회된 총 개수를 보여주고 있는데....
+
+이 필터가 바뀌면 바뀌었다는 이벤트를 캐치하여 그때 다시 그리드에 조회된 개수를 변경해주고 싶은데....
+
+이 필터가 변경되었다 는걸 어떻게 캐치할 수 잇을까요? 이벤트 목록에 따로 없는거 같아서..여쭤봅니다
+
+
+
+<< 재현 방법 >>
+
+( 재현이 쉽도록 순서를 명시하여 주시면 좋습니다. 관련 소스는 가급적 첨부파일로 올려 주시기 바랍니다.)
+
+
+
+","안녕하세요.
+gridView에 header Filter를 제어하는 이벤트는 현재 지원하지 않으므로, 
+필터가 적용되어 dataList의 값이 변경되는 것을 체크하는 로직으로 구현하시면 될듯합니다.
+dataList의 onbeforecolumnfilterchange 이벤트를 사용해보시기 바랍니다.
+
+감사합니다.",,"<< 概要 >>
+
+こんにちは。
+
+gridviewでusefilterlistを利用してヘッダーにフィルターを使用しています。
+
+現在、グリッドに表示されている総数を表示していますが...
+
+このフィルターが変更された場合、変更されたというイベントをキャッチして、その時に再度グリッドに表示されている数を変更したいのですが...
+
+このフィルターが変更されたことをどうやってキャッチできますか？イベントリストには特にないようなので、お伺いします。
+
+
+
+<< 再現方法 >>
+
+（再現が簡単になるように順序を明示していただけると助かります。関連ソースはできるだけ添付ファイルでアップロードしてください。）","<< 概要 >>
+
+こんにちは。
+
+gridviewでuseflterlistを使用してヘッダーにフィルターを適用しています。
+
+現在、グリッドに表示されている総件数を表示していますが...
+
+このフィルターが変更されたときにイベントをキャッチして、その時点でグリッドに表示されている件数を更新したいのですが...
+
+このフィルターが変更されたことをどのようにキャッチできるでしょうか？イベントリストに特に記載がないようなので、お聞きしています。
+
+
+
+<< 再現方法 >>
+
+（再現しやすいように手順を明記していただけると助かります。関連するソースコードは可能な限り添付ファイルでアップロードしてください。）","<< 개요 >>
+
+안녕하세요.
+
+gridview에서 usefilterlist를 이용하여 헤더에 필터를 사용하고 있습니다.
+
+현재 그리드에 표시되고 있는 총수를 표시하고 있는데...
+
+이 필터가 변경된 경우, 변경되었다는 이벤트를 캐치하여 그때 다시 그리드에 표시되고 있는 수를 변경하고 싶습니다만...
+
+이 필터가 변경된 것을 어떻게 캐치할 수 있습니까? 이벤트 리스트에는 특별히 없는 것 같아서 여쭤봅니다.
+
+
+
+<< 재현 방법 >>
+
+(재현이 간단해지도록 순서를 명시해 주시면 도움이 됩니다. 관련 소스는 가능한 첨부 파일로 업로드해 주세요.)","<< 개요 >>
+
+안녕하세요.
+
+gridview에서 usefilterlist를 사용하여 헤더에 필터를 적용하고 있습니다.
+
+현재 그리드에 표시되는 총 건수를 표시하고 있지만...
+
+이 필터가 변경되었을 때 이벤트를 캐치하여 그 시점에 그리드에 표시되는 건수를 업데이트하고 싶습니다만...
+
+이 필터가 변경되었음을 어떻게 캐치할 수 있을까요? 이벤트 리스트에 특별히 기재된 것이 없는 것 같아서 문의드립니다.
+
+
+
+<< 재현 방법 >>
+
+(재현하기 쉽도록 절차를 명시해 주시면 감사하겠습니다. 관련 소스 코드는 가능한 한 첨부 파일로 업로드해 주세요.)"
+6,gridview 내부 escape 옵션문의3,"<< 개요 >>
+
+( 기능 문의의 경우 해당 기능의 사용 용도와 목적을 구체적으로 기술해 주시기 바랍니다. )
+gridview 내부 inputType이 textImage인 경우
+escape  = true 옵션이 적용이 안되는듯 합니다.
+
+
+입력하면서 포커스시 <PE> 제대로 표기되지만
+
+입력 후에는  <PE> 부분이 태그로 변경되어 사라집니다
+
+다시 선택하면 <PE>부분은 글자로 표기됩니다
+
+버그인지 제가 잘못 사용하고 있는건지 궁금합니다
+
+inputType이 TEXT나 다른타입의 경우  escape  = true 작동 잘 됩니다.
+
+<< 재현 방법 >>
+
+( 재현이 쉽도록 순서를 명시하여 주시면 좋습니다. 관련 소스는 가급적 첨부파일로 올려 주시기 바랍니다.)
+
+
+
+","안녕하세요.
+type이 textImage인 경우 escape=""True""가 적용되지 않는 것을 확인했습니다.
+해당 기능은 22년 7월 이후 엔진에서 개선되었으며, 요청 시 최신 엔진 전달드리도록 하겠습니다.",,"<< 概要 >>
+
+( 機能に関する問い合わせの場合、その機能の使用用途と目的を具体的に記述してください。)
+gridview 内部の inputType が textImage の場合、
+escape = true オプションが適用されていないようです。
+
+入力中にフォーカスが当たると <PE> が正しく表示されますが、
+
+入力後には <PE> 部分がタグに変換されて消えてしまいます。
+
+再度選択すると <PE> 部分は文字として表示されます。
+
+バグなのか、私の使い方が間違っているのか気になります。
+
+inputType が TEXT や他のタイプの場合、escape = true は正常に動作します。
+
+<< 再現方法 >>
+
+( 再現が容易になるように手順を明記してください。関連ソースは可能な限り添付ファイルとしてアップロードしてください。)","<< 概要 >>
+
+（機能に関するお問い合わせの場合は、その機能の使用目的と目的を具体的に記述してください。）
+gridview内のinputTypeがtextImageの場合、
+escape = trueオプションが適用されていないようです。
+
+入力中にフォーカスを合わせると<PE>が正しく表示されますが、
+
+入力後は<PE>部分がタグに変更されて消えてしまいます。
+
+再度選択すると<PE>部分は文字として表示されます。
+
+これがバグなのか、私の使用方法が間違っているのか気になります。
+
+inputTypeがTEXTや他のタイプの場合、escape = trueは正常に動作します。
+
+<< 再現方法 >>
+
+（再現しやすいように順序を明記していただけると助かります。関連するソースはできるだけ添付ファイルでアップロードしてください。）","<< 개요 >>
+
+( 기능에 관한 문의의 경우, 해당 기능의 사용 용도와 목적을 구체적으로 기재해 주세요.)
+gridview 내부의 inputType이 textImage인 경우,
+escape = true 옵션이 적용되지 않는 것 같습니다.
+
+입력 중에 포커스가 맞춰지면 <PE>가 올바르게 표시되지만,
+
+입력 후에는 <PE> 부분이 태그로 변환되어 사라집니다.
+
+다시 선택하면 <PE> 부분이 문자로 표시됩니다.
+
+버그인지, 제 사용 방법이 잘못된 것인지 궁금합니다.
+
+inputType이 TEXT나 다른 타입인 경우, escape = true는 정상적으로 동작합니다.
+
+<< 재현 방법 >>
+
+( 재현이 용이하도록 절차를 명시해 주세요. 관련 소스는 가능한 한 첨부 파일로 업로드해 주세요.)","다음은 일본어를 한국어로 번역한 내용입니다:
+
+<< 개요 >>
+
+(기능에 관한 문의인 경우, 해당 기능의 사용 목적과 용도를 구체적으로 기술해 주세요.)
+gridview 내의 inputType이 textImage인 경우,
+escape = true 옵션이 적용되지 않는 것 같습니다.
+
+입력 중 포커스를 맞추면 <PE>가 올바르게 표시되지만,
+
+입력 후에는 <PE> 부분이 태그로 변경되어 사라집니다.
+
+다시 선택하면 <PE> 부분은 문자로 표시됩니다.
+
+이것이 버그인지, 제 사용 방법이 잘못된 것인지 궁금합니다.
+
+inputType이 TEXT나 다른 타입인 경우, escape = true는 정상적으로 작동합니다.
+
+<< 재현 방법 >>
+
+(재현하기 쉽도록 순서를 명시해 주시면 감사하겠습니다. 관련 소스는 가능한 한 첨부 파일로 업로드해 주세요.)"
+7,"GridView 셀값이 ""0""->""""로 변경될 때 rowStatus가 변경되지 않는 문제2","<< 개요 >>
+
+( 기능 문의의 경우 해당 기능의 사용 용도와 목적을 구체적으로 기술해 주시기 바랍니다. )
+
+GridView 셀의 값이 0인 상태에서 0을 지우고 빈 셀로 만들면 rowStatus가 'U'로 변경되지 않고 'R'로 유지되는 현상이 있습니다.
+1. DataList 컬럼의 ignoreStatus = false인 상태
+2. DataList 컬럼의 dataType = text, GridView의 셀 property에서 dataType = text인 경우
+3. DataList 컬럼의 dataType = number, GridView의 셀 property에서 dataType = number인 경우
+1~3의 조건에서 동일한 현상이 발생합니다.
+셀의 값이 ""0"" -> """"으로 변경됐지만 rowStatus가 변경되지 않아 변경값의 유효성 체크에 어려움이 있는데
+이 경우 rowStatus가 변경되지 않는 건 의도적인 건가요? 별도의 체크 로직을 작성해야 할지 아니면 다른 property 등 설정값 변경으로 해결할 수 있는지 문의드립니다.
+
+
+
+
+<< 재현 방법 >>
+
+( 재현이 쉽도록 순서를 명시하여 주시면 좋습니다. 관련 소스는 가급적 첨부파일로 올려 주시기 바랍니다.)
+
+
+
+",,,"<< 概要 >>
+
+(機能に関する問い合わせの場合、その機能の使用用途と目的を具体的に記述してください。)
+
+GridViewセルの値が0の状態で0を削除して空のセルにすると、rowStatusが「U」に変更されず「R」のままになる現象があります。
+1. DataListカラムのignoreStatus = falseの状態
+2. DataListカラムのdataType = text、GridViewのセルプロパティでdataType = textの場合
+3. DataListカラムのdataType = number、GridViewのセルプロパティでdataType = numberの場合
+1～3の条件で同じ現象が発生します。
+セルの値が「0」->「」に変更されましたが、rowStatusが変更されず、変更値の有効性チェックが難しいのですが、
+この場合、rowStatusが変更されないのは意図的なものですか？別途チェックロジックを作成する必要があるのか、それとも他のプロパティなど設定値の変更で解決できるのか問い合わせます。
+
+<< 再現方法 >>
+
+(再現が容易になるように順序を明示してください。関連ソースはできるだけ添付ファイルでアップロードしてください。)","<< 概要 >>
+
+（機能に関するお問い合わせの場合は、その機能の使用目的と目的を具体的に記述してください。）
+
+GridViewのセルの値が0の状態で0を消して空のセルにすると、rowStatusが'U'に変更されず'R'のままになる現象があります。
+1. DataListカラムのignoreStatus = falseの状態
+2. DataListカラムのdataType = text、GridViewのセルプロパティでdataType = textの場合
+3. DataListカラムのdataType = number、GridViewのセルプロパティでdataType = numberの場合
+1〜3の条件で同じ現象が発生します。
+セルの値が""0"" -> """"に変更されましたが、rowStatusが変更されないため、変更値の有効性チェックが困難です。
+この場合、rowStatusが変更されないのは意図的なものでしょうか？別途チェックロジックを作成する必要があるのか、それとも他のプロパティなどの設定値変更で解決できるのかお問い合わせいたします。
+
+
+
+
+<< 再現方法 >>
+
+（再現しやすいように順序を明記していただけると助かります。関連ソースはできるだけ添付ファイルでアップロードしてください。）","<< 개요 >>
+
+(기능에 관한 문의의 경우, 그 기능의 사용 용도와 목적을 구체적으로 기재해 주세요.)
+
+GridView 셀의 값이 0인 상태에서 0을 삭제하고 빈 셀로 만들면, rowStatus가 ""U""로 변경되지 않고 ""R""인 채로 남는 현상이 있습니다.
+1. DataList 컬럼의 ignoreStatus = false 상태
+2. DataList 컬럼의 dataType = text, GridView의 셀 프로퍼티에서 dataType = text인 경우
+3. DataList 컬럼의 dataType = number, GridView의 셀 프로퍼티에서 dataType = number인 경우
+1~3의 조건에서 동일한 현상이 발생합니다.
+셀의 값이 ""0""->""""로 변경되었지만, rowStatus가 변경되지 않아 변경 값의 유효성 체크가 어려운데,
+이 경우, rowStatus가 변경되지 않는 것은 의도적인 것인가요? 별도의 체크 로직을 작성할 필요가 있는지, 아니면 다른 프로퍼티 등의 설정 값 변경으로 해결할 수 있는지 문의드립니다.
+
+<< 재현 방법 >>
+
+(재현이 용이하도록 순서를 명시해 주세요. 관련 소스는 가능한 첨부 파일로 업로드해 주세요.)","<< 개요 >>
+
+(기능에 관한 문의의 경우, 해당 기능의 사용 목적과 목적을 구체적으로 기술해 주세요.)
+
+GridView의 셀 값이 0인 상태에서 0을 지우고 빈 셀로 만들면, rowStatus가 'U'로 변경되지 않고 'R' 상태로 유지되는 현상이 있습니다.
+1. DataList 컬럼의 ignoreStatus = false 상태
+2. DataList 컬럼의 dataType = text, GridView의 셀 속성에서 dataType = text인 경우
+3. DataList 컬럼의 dataType = number, GridView의 셀 속성에서 dataType = number인 경우
+1~3의 조건에서 동일한 현상이 발생합니다.
+셀의 값이 ""0"" -> """"로 변경되었지만, rowStatus가 변경되지 않아 변경 값의 유효성 검사가 어렵습니다.
+이 경우, rowStatus가 변경되지 않는 것이 의도적인 것인지요? 별도의 체크 로직을 만들어야 하는지, 아니면 다른 속성 등의 설정값 변경으로 해결할 수 있는지 문의드립니다.
+
+
+
+
+<< 재현 방법 >>
+
+(재현하기 쉽도록 순서를 명시해 주시면 감사하겠습니다. 관련 소스는 가능한 첨부 파일로 업로드해 주세요.)"
+8,gridview header 전체선택 로직 문의1,"<< 개요 >>
+
+gridview header 컬럼의 inputType을 checkbox로 설정해 전체선택을 할 수 있도록 개발중에 있습니다.
+
+gridview를 이용해 개발을 하다보면 로직상 전체선택을 막아야 하는 경우가 있습니다. (ex. 특정 column값이 비어있는 경우)
+클릭 이벤트의 반환값으로 이벤트 객체가 넘어오는 경우 preventDefault 함수를 이용해 특정 이벤트를 막는 것으로 알고 있지만, onheaderclick의 반환값으로 headerId만 넘어와 preventDefault 함수를 쓸 수 없어 특정 조건의 경우 전체선택을 막는 기능을 어떻게 구현해야 할지 잘 모르겠습니다.
+
+혹시 웹스퀘어에서 header의 checkbox를 이용해 전체선택을 하는 경우, checkbox를 클릭했을 때 전체선택을 막을 수 있는 방법이 있을까요?
+( 기능 문의의 경우 해당 기능의 사용 용도와 목적을 구체적으로 기술해 주시기 바랍니다. )
+
+
+
+<< 재현 방법 >>
+
+[원하는 기능]
+1. header의 checkbox를 클릭해 gridview 데이터 전체 선택을 시도한다.
+2. 조건에 따라 전체선택이 가능한 경우와 불가능한 경우 로직을 분기한다.
+2-1: 전체선택이 가능한 경우
+- 기존 로직과 동일하게 전체선택이 된다.
+2-2: 전체선택이 가능하지 않은 경우(ex. gridview에 바인딩 된 datalist를 확인해 특정 컬럼에 값이 없는 경우)
+- 전체선택을 막는다.
+
+( 재현이 쉽도록 순서를 명시하여 주시면 좋습니다. 관련 소스는 가급적 첨부파일로 올려 주시기 바랍니다.)
+
+
+
+","안녕하세요.
+
+checkbox 컬럼에 true 값을 체크하여 true 값이 있는 경우, setHeaderDisabled(); true 적용한 테스트 파일 첨부드립니다.
+테스트 파일 확인부탁드립니다.
+
+감사합니다.",,"<< 概要 >>
+
+gridviewのヘッダー列のinputTypeをcheckboxに設定し、全選択ができるように開発中です。
+
+gridviewを利用して開発を進めると、ロジック上全選択を防がなければならない場合があります。（例：特定のカラム値が空の場合）
+クリックイベントの戻り値としてイベントオブジェクトが渡される場合、preventDefault関数を利用して特定のイベントを防ぐことができると知っていますが、onheaderclickの戻り値としてheaderIdしか渡されず、preventDefault関数を使えないため、特定の条件の場合に全選択を防ぐ機能をどのように実装すればよいか分かりません。
+
+もしウェブスクエアでヘッダーのcheckboxを利用して全選択を行う場合、checkboxをクリックしたときに全選択を防ぐ方法はありますか？
+（機能に関する問い合わせの場合、その機能の使用用途と目的を具体的に記述してください。）
+
+
+
+<< 再現方法 >>
+
+[望む機能]
+1. ヘッダーのcheckboxをクリックしてgridviewデータ全体の選択を試みる。
+2. 条件に応じて全選択が可能な場合と不可能な場合のロジックを分岐する。
+2-1: 全選択が可能な場合
+- 既存のロジックと同様に全選択が行われる。
+2-2: 全選択が不可能な場合（例：gridviewにバインドされたdatalistを確認し、特定のカラムに値がない場合）
+- 全選択を防ぐ。
+
+（再現が容易になるように順序を明示してください。関連ソースはできるだけ添付ファイルとしてアップロードしてください。）","<< 概要 >>
+
+gridviewのヘッダーカラムのinputTypeをcheckboxに設定し、全選択ができるように開発中です。
+
+gridviewを使用して開発を進めていると、ロジック上、全選択を防ぐ必要がある場合があります（例：特定のカラム値が空の場合）。
+クリックイベントの戻り値としてイベントオブジェクトが渡される場合、preventDefault関数を使用して特定のイベントを防ぐことができると理解していますが、onheaderclickの戻り値としてheaderIdのみが渡されるため、preventDefault関数を使用できず、特定の条件の場合に全選択を防ぐ機能をどのように実装すべきか分かりません。
+
+ウェブスクエアでヘッダーのチェックボックスを使用して全選択を行う場合、チェックボックスをクリックしたときに全選択を防ぐ方法はありますか？
+（機能に関する問い合わせの場合は、その機能の使用目的と目的を具体的に記述してください。）
+
+<< 再現方法 >>
+
+[希望する機能]
+1. ヘッダーのチェックボックスをクリックしてgridviewデータの全選択を試みる。
+2. 条件に応じて全選択が可能な場合と不可能な場合のロジックを分岐する。
+2-1: 全選択が可能な場合
+- 既存のロジックと同様に全選択が行われる。
+2-2: 全選択が不可能な場合（例：gridviewにバインドされたdatalistを確認し、特定のカラムに値がない場合）
+- 全選択を防ぐ。
+
+（再現しやすいように順序を明記していただけると助かります。関連するソースは可能な限り添付ファイルでアップロードしてください。）","<< 개요 >>
+
+gridview의 헤더 열의 inputType을 checkbox로 설정하여 전체 선택이 가능하도록 개발 중입니다.
+
+gridview를 이용해 개발을 진행하다 보면, 로직상 전체 선택을 방지해야 하는 경우가 있습니다. (예: 특정 컬럼 값이 비어 있는 경우)
+클릭 이벤트의 반환 값으로 이벤트 객체가 전달되는 경우, preventDefault 함수를 이용해 특정 이벤트를 방지할 수 있다는 것을 알고 있지만, onheaderclick의 반환 값으로 headerId만 전달되어 preventDefault 함수를 사용할 수 없기 때문에 특정 조건의 경우 전체 선택을 방지하는 기능을 어떻게 구현해야 할지 모르겠습니다.
+
+만약 웹스퀘어에서 헤더의 checkbox를 이용해 전체 선택을 수행하는 경우, checkbox를 클릭했을 때 전체 선택을 방지하는 방법이 있습니까?
+(기능에 관한 문의인 경우, 그 기능의 사용 용도와 목적을 구체적으로 기재해 주십시오.)
+
+<< 재현 방법 >>
+
+[원하는 기능]
+1. 헤더의 checkbox를 클릭하여 gridview 데이터 전체 선택을 시도합니다.
+2. 조건에 따라 전체 선택이 가능한 경우와 불가능한 경우의 로직을 분기합니다.
+2-1: 전체 선택이 가능한 경우
+- 기존 로직과 동일하게 전체 선택이 수행됩니다.
+2-2: 전체 선택이 불가능한 경우 (예: gridview에 바인딩된 datalist를 확인하여 특정 컬럼에 값이 없는 경우)
+- 전체 선택을 방지합니다.
+
+(재현이 용이하도록 순서를 명시해 주십시오. 관련 소스는 가능한 첨부 파일로 업로드해 주십시오.)","<< 개요 >>
+
+gridview의 헤더 컬럼의 inputType을 checkbox로 설정하여 전체 선택이 가능하도록 개발 중입니다.
+
+gridview를 사용하여 개발을 진행하다 보면 로직상 전체 선택을 방지해야 하는 경우가 있습니다(예: 특정 컬럼 값이 비어있는 경우).
+클릭 이벤트의 반환값으로 이벤트 객체가 전달되는 경우, preventDefault 함수를 사용하여 특정 이벤트를 방지할 수 있다고 이해하고 있지만, onheaderclick의 반환값으로 headerId만 전달되기 때문에 preventDefault 함수를 사용할 수 없어 특정 조건일 때 전체 선택을 방지하는 기능을 어떻게 구현해야 할지 모르겠습니다.
+
+웹스퀘어에서 헤더의 체크박스를 사용하여 전체 선택을 할 때, 체크박스를 클릭했을 때 전체 선택을 방지하는 방법이 있나요?
+(기능에 대한 문의일 경우 해당 기능의 사용 목적과 목적을 구체적으로 기술해 주세요.)
+
+<< 재현 방법 >>
+
+[희망하는 기능]
+1. 헤더의 체크박스를 클릭하여 gridview 데이터의 전체 선택을 시도합니다.
+2. 조건에 따라 전체 선택이 가능한 경우와 불가능한 경우의 로직을 분기합니다.
+2-1: 전체 선택이 가능한 경우
+- 기존 로직과 동일하게 전체 선택이 이루어집니다.
+2-2: 전체 선택이 불가능한 경우(예: gridview에 바인딩된 datalist를 확인하여 특정 컬럼에 값이 없는 경우)
+- 전체 선택을 방지합니다.
+
+(재현하기 쉽도록 순서를 명시해 주시면 감사하겠습니다. 관련 소스는 가능한 한 첨부 파일로 업로드해 주세요.)"
+9,gridview의 setColumnVisibleColumn api 질문4,"<< 개요 >>
+
+( 기능 문의의 경우 해당 기능의 사용 용도와 목적을 구체적으로 기술해 주시기 바랍니다. )
+
+해당 api를 사용하는데 
+감추려는 컬럼을 3줄로 입력하였는데 마지막 줄만 적용이 됐습니다
+인덱스가 0-5 인데 
+여러건을 감출수는 없나요?
+
+<< 재현 방법 >>
+
+( 재현이 쉽도록 순서를 명시하여 주시면 좋습니다. 관련 소스는 가급적 첨부파일로 올려 주시기 바랍니다.)
+
+
+
+","안녕하세요.
+
+gridView setColumnVisibleColumn(); API 관련하여 테스트 파일 첨부드립니다.
+inputType=""select""에 바인딩 된 dataList type 컬럼 true인 값들을 visible 처리한 테스트 파일입니다.
+
+확인부탁드립니다.
+감사합니다.",,"<< 概要 >>
+
+( 機能に関する問い合わせの場合、その機能の使用用途と目的を具体的に記述してください。)
+
+該当のAPIを使用する際に、隠したいカラムを3行入力しましたが、最後の行だけが適用されました。
+インデックスが0-5ですが、複数の項目を隠すことはできないのでしょうか？
+
+<< 再現方法 >>
+
+( 再現が容易になるように順序を明示してください。関連ソースは可能な限り添付ファイルとしてアップロードしてください。)","<< 概要 >>
+
+（機能に関するお問い合わせの場合は、その機能の使用目的と目的を具体的に記述してください。）
+
+該当APIを使用する際に、
+非表示にしたい列を3行で入力しましたが、最後の行だけが適用されました。
+インデックスが0-5の場合、
+複数の項目を非表示にすることはできないのでしょうか？
+
+<< 再現方法 >>
+
+（再現しやすいように順序を明記していただけると助かります。関連するソースコードは可能な限り添付ファイルでアップロードしてください。）","<< 개요 >>
+
+( 기능에 관한 문의의 경우, 해당 기능의 사용 용도와 목적을 구체적으로 기재해 주세요.)
+
+해당 API를 사용할 때, 숨기고 싶은 컬럼을 3행 입력했지만, 마지막 행만 적용되었습니다.
+인덱스가 0-5인데, 여러 항목을 숨길 수 없는 건가요?
+
+<< 재현 방법 >>
+
+( 재현이 용이하도록 순서를 명시해 주세요. 관련 소스는 가능한 한 첨부 파일로 업로드해 주세요.)","다음은 일본어를 한국어로 번역한 결과입니다:
+
+<< 개요 >>
+
+(기능에 관한 문의의 경우, 해당 기능의 사용 목적과 목적을 구체적으로 기술해 주십시오.)
+
+해당 API를 사용할 때,
+숨기고 싶은 열을 3행으로 입력했지만, 마지막 행만 적용되었습니다.
+인덱스가 0-5인 경우,
+여러 항목을 숨기는 것은 불가능한 것인가요?
+
+<< 재현 방법 >>
+
+(재현하기 쉽도록 순서를 명기해 주시면 감사하겠습니다. 관련된 소스 코드는 가능한 한 첨부 파일로 업로드해 주십시오.)"
+10,[gridView] groupBy() 후 엑셀 다운로드1,"<< 개요 >>
+gridView에서 groupBy()후 해당 그리드데이터를 엑셀 다운로드시 무한로딩 or 무반응
+
+
+
+
+<< 재현 방법 >>
+1) 검색조건의 물품별합계, 창고별합계 선택 - scwin.chk_onchange()
+2) 엑셀버튼 클릭하여 엑셀다운로드 - scwin.fExcelDown()
+
+
+
+
+","안녕하십니까!
+
+그리드 groupby시 엑셀 다운로드를 할때는
+옵션에 groupby=''true' 를 추가해 주시면 될거 같습니다.
+
+-------------------------------------------------------------
+  var options = {};
+  options.fileName = ""excelData.xlsx"";
+  //그리드 그룹바이 옵션 추가
+  options.groupby = ""true"";
+  
+  gridView1.advancedExcelDownload( options );
+-------------------------------------------------------------
+
+소스상에서 공통함수 ef.gridDataDownLoad 함수 안에서 추가해 주신 
+groupby 옵션이 잘 셋팅이 되는지 확인을 해보시기 바랍니다.
+
+그리고 groupby 옵션도 이상이 없는지 확인해 보시면 될거 같습니다.
+
+간단한 테스트 샘플을 첨부 전달드립니다.
+
+감사합니다.
+
+
+감사합니다.
+ ",,"<< 概要 >>
+gridViewでgroupBy()した後、該当グリッドデータをエクセルダウンロードすると無限ローディングまたは無反応
+
+
+
+
+<< 再現方法 >>
+1) 検索条件の物品別合計、倉庫別合計を選択 - scwin.chk_onchange()
+2) エクセルボタンをクリックしてエクセルダウンロード - scwin.fExcelDown()","<< 概要 >>
+gridViewでgroupBy()を実行した後、該当のグリッドデータをエクセルダウンロードする際に無限ローディングまたは無反応が発生する問題
+
+<< 再現方法 >>
+1) 検索条件の「商品別合計」、「倉庫別合計」を選択 - scwin.chk_onchange()
+2) エクセルボタンをクリックしてエクセルダウンロードを実行 - scwin.fExcelDown()","<< 개요 >>
+gridView에서 groupBy()한 후, 해당 그리드 데이터를 엑셀 다운로드하면 무한 로딩 또는 무반응
+
+
+
+
+<< 재현 방법 >>
+1) 검색 조건의 물품별 합계, 창고별 합계를 선택 - scwin.chk_onchange()
+2) 엑셀 버튼을 클릭하여 엑셀 다운로드 - scwin.fExcelDown()","다음은 일본어를 한국어로 번역한 결과입니다:
+
+<< 개요 >>
+gridView에서 groupBy()를 실행한 후, 해당 그리드 데이터를 엑셀 다운로드할 때 무한 로딩 또는 무반응이 발생하는 문제
+
+<< 재현 방법 >>
+1) 검색 조건의 ""상품별 합계"", ""창고별 합계""를 선택 - scwin.chk_onchange()
+2) 엑셀 버튼을 클릭하여 엑셀 다운로드를 실행 - scwin.fExcelDown()"
+11,DataList 데이터를 Gridview로 보여줄 때 행과 열 변경하는 방법 문의3,"<< 개요 >>
+
+간단하게 예시를 하나 들겠습니다.
+[
+    {'id': 'testID1', name: 'testName1', cont1: 'testCont1-1', cont2: 'testCont2-1'},
+    {'id': 'testID2', name: 'testName2', cont1: 'testCont1-2', cont2: 'testCont2-2'},
+    {'id': 'testID3', name: 'testName3', cont1: 'testCont1-3', cont2: 'testCont2-3'},
+    {'id': 'testID4', name: 'testName4', cont1: 'testCont1-4', cont2: 'testCont2-4'},
+    {'id': 'testID5', name: 'testName5', cont1: 'testCont1-5', cont2: 'testCont2-5'},
+    {'id': 'testID6', name: 'testName6', cont1: 'testCont1-6', cont2: 'testCont2-6'},
+]
+
+이런 데이터를 DataList에 담았습니다.
+그리고 저는 gridview로 이렇게 그리고 싶습니다.
+    testName1 testName2 testName3 testName4 testName5 testName6
+ID testID1 testID2 testID3 testID4 testID5 testID6
+CONT1 testCont1-1 testCont1-2 testCont1-3 testCont1-4 testCont1-5 testCont1-6
+CONT2 testCont2-1 testCont2-2 testCont2-3 testCont2-4 testCont2-5 testCont2-6
+
+일반적인 gridview로 datalist에 세팅 후 그릴 때는 위쪽 header엔 해당datalist의 key가 세팅되어 row단위로 데이터가 세팅되는데 전 컬럼 단위로 세팅되게 하고 싶습니다.
+
+방법이 있다면 알려주셨으면 합니다.
+
+
+
+<< 재현 방법 >>
+
+( 재현이 쉽도록 순서를 명시하여 주시면 좋습니다. 관련 소스는 가급적 첨부파일로 올려 주시기 바랍니다.)
+
+
+
+","안녕하세요.
+
+말씀해주신 컬럼 단위로 설정하는 방법은 지원하지않습니다.
+
+감사합니다.",,"<< 概要 >>
+
+簡単に例を一つ挙げます。
+[
+    {'id': 'testID1', name: 'testName1', cont1: 'testCont1-1', cont2: 'testCont2-1'},
+    {'id': 'testID2', name: 'testName2', cont1: 'testCont1-2', cont2: 'testCont2-2'},
+    {'id': 'testID3', name: 'testName3', cont1: 'testCont1-3', cont2: 'testCont2-3'},
+    {'id': 'testID4', name: 'testName4', cont1: 'testCont1-4', cont2: 'testCont2-4'},
+    {'id': 'testID5', name: 'testName5', cont1: 'testCont1-5', cont2: 'testCont2-5'},
+    {'id': 'testID6', name: 'testName6', cont1: 'testCont1-6', cont2: 'testCont2-6'},
+]
+
+このようなデータをDataListに入れました。
+そして、私はgridviewでこのように描きたいです。
+    testName1 testName2 testName3 testName4 testName5 testName6
+ID testID1 testID2 testID3 testID4 testID5 testID6
+CONT1 testCont1-1 testCont1-2 testCont1-3 testCont1-4 testCont1-5 testCont1-6
+CONT2 testCont2-1 testCont2-2 testCont2-3 testCont2-4 testCont2-5 testCont2-6
+
+一般的なgridviewでdatalistに設定後描くときは、上部のヘッダーに該当datalistのkeyが設定され、行単位でデータが設定されますが、私は列単位で設定されるようにしたいです。
+
+方法があれば教えていただけますか。
+
+
+
+<< 再現方法 >>
+
+（再現が容易になるように順序を明示していただけると助かります。関連ソースは可能な限り添付ファイルでアップロードしてください。）","<< 概要 >>
+
+簡単に例を一つ挙げます。
+[
+    {'id': 'testID1', name: 'testName1', cont1: 'testCont1-1', cont2: 'testCont2-1'},
+    {'id': 'testID2', name: 'testName2', cont1: 'testCont1-2', cont2: 'testCont2-2'},
+    {'id': 'testID3', name: 'testName3', cont1: 'testCont1-3', cont2: 'testCont2-3'},
+    {'id': 'testID4', name: 'testName4', cont1: 'testCont1-4', cont2: 'testCont2-4'},
+    {'id': 'testID5', name: 'testName5', cont1: 'testCont1-5', cont2: 'testCont2-5'},
+    {'id': 'testID6', name: 'testName6', cont1: 'testCont1-6', cont2: 'testCont2-6'},
+]
+
+このようなデータをDataListに格納しました。
+そして、私はgridviewでこのように描画したいです。
+    testName1 testName2 testName3 testName4 testName5 testName6
+ID testID1 testID2 testID3 testID4 testID5 testID6
+CONT1 testCont1-1 testCont1-2 testCont1-3 testCont1-4 testCont1-5 testCont1-6
+CONT2 testCont2-1 testCont2-2 testCont2-3 testCont2-4 testCont2-5 testCont2-6
+
+一般的なgridviewでdatalistにセット後に描画する際は、上部のヘッダーには該当datalistのkeyがセットされ、行単位でデータがセットされますが、私は列単位でセットされるようにしたいです。
+
+方法があれば教えていただきたいです。
+
+<< 再現方法 >>
+
+（再現が容易になるよう、順序を明記していただけると助かります。関連ソースはできるだけ添付ファイルでアップロードしてください。）","<< 개요 >>
+
+간단히 예를 하나 들겠습니다.
+[
+    {'id': 'testID1', name: 'testName1', cont1: 'testCont1-1', cont2: 'testCont2-1'},
+    {'id': 'testID2', name: 'testName2', cont1: 'testCont1-2', cont2: 'testCont2-2'},
+    {'id': 'testID3', name: 'testName3', cont1: 'testCont1-3', cont2: 'testCont2-3'},
+    {'id': 'testID4', name: 'testName4', cont1: 'testCont1-4', cont2: 'testCont2-4'},
+    {'id': 'testID5', name: 'testName5', cont1: 'testCont1-5', cont2: 'testCont2-5'},
+    {'id': 'testID6', name: 'testName6', cont1: 'testCont1-6', cont2: 'testCont2-6'},
+]
+
+이러한 데이터를 DataList에 넣었습니다.
+그리고, 저는 gridview에서 이렇게 그리고 싶습니다.
+    testName1 testName2 testName3 testName4 testName5 testName6
+ID testID1 testID2 testID3 testID4 testID5 testID6
+CONT1 testCont1-1 testCont1-2 testCont1-3 testCont1-4 testCont1-5 testCont1-6
+CONT2 testCont2-1 testCont2-2 testCont2-3 testCont2-4 testCont2-5 testCont2-6
+
+일반적인 gridview에서 datalist에 설정 후 그릴 때는, 상단의 헤더에 해당 datalist의 key가 설정되고, 행 단위로 데이터가 설정되지만, 저는 열 단위로 설정되도록 하고 싶습니다.
+
+방법이 있으면 알려주시겠습니까?
+
+
+
+<< 재현 방법 >>
+
+(재현이 용이하도록 순서를 명시해 주시면 도움이 되겠습니다. 관련 소스는 가능한 한 첨부 파일로 업로드해 주십시오.)","<< 개요 >>
+
+간단히 예를 하나 들겠습니다.
+[
+    {'id': 'testID1', name: 'testName1', cont1: 'testCont1-1', cont2: 'testCont2-1'},
+    {'id': 'testID2', name: 'testName2', cont1: 'testCont1-2', cont2: 'testCont2-2'},
+    {'id': 'testID3', name: 'testName3', cont1: 'testCont1-3', cont2: 'testCont2-3'},
+    {'id': 'testID4', name: 'testName4', cont1: 'testCont1-4', cont2: 'testCont2-4'},
+    {'id': 'testID5', name: 'testName5', cont1: 'testCont1-5', cont2: 'testCont2-5'},
+    {'id': 'testID6', name: 'testName6', cont1: 'testCont1-6', cont2: 'testCont2-6'},
+]
+
+이와 같은 데이터를 DataList에 저장했습니다.
+그리고 저는 gridview에서 이렇게 렌더링하고 싶습니다.
+    testName1 testName2 testName3 testName4 testName5 testName6
+ID testID1 testID2 testID3 testID4 testID5 testID6
+CONT1 testCont1-1 testCont1-2 testCont1-3 testCont1-4 testCont1-5 testCont1-6
+CONT2 testCont2-1 testCont2-2 testCont2-3 testCont2-4 testCont2-5 testCont2-6
+
+일반적인 gridview에서 datalist에 설정 후 렌더링할 때는 상단 헤더에 해당 datalist의 key가 설정되고, 행 단위로 데이터가 설정되지만, 저는 열 단위로 설정되도록 하고 싶습니다.
+
+방법이 있다면 알려주시면 감사하겠습니다.
+
+<< 재현 방법 >>
+
+(재현이 쉽도록 순서를 명시해 주시면 도움이 됩니다. 관련 소스는 가능한 첨부 파일로 업로드해 주세요.)"
+12,gridView fixedColumn 문의1,"<< 개요 >>
+
+gridView 에 바인딩하는 10개의 컬럼중 앞에 3개의 컬럼과 뒤에 3개의 컬럼을 고정하고 싶은데 방법이 있는지 문의 드립니다.
+
+
+
+<< 재현 방법 >>
+
+( 재현이 쉽도록 순서를 명시하여 주시면 좋습니다. 관련 소스는 가급적 첨부파일로 올려 주시기 바랍니다.)
+
+
+
+","안녕하세요.
+
+해당 gridView에 fixedColumn, fixedRightColumn 속성을 설정해주시면 됩니다.
+
+// 속성 설정 예시
+<w2:gridView fixedColumn=""3"" fixedRightColumn=""3"" ....
+
+추가로 프로젝트명 기입 부탁드립니다.
+감사합니다.",,"<< 概要 >>
+
+gridViewにバインドする10個のカラムのうち、前の3つのカラムと後ろの3つのカラムを固定したいのですが、方法があるかどうかお問い合わせします。
+
+
+
+<< 再現方法 >>
+
+（再現が簡単になるように順序を明示していただけると助かります。関連ソースはできるだけ添付ファイルでアップロードしてください。）","<< 概要 >>
+
+gridViewにバインドする10個のカラムのうち、前の3つのカラムと後ろの3つのカラムを固定したいのですが、その方法について問い合わせいたします。
+
+<< 再現方法 >>
+
+（再現しやすいように順序を明記していただけると助かります。関連するソースコードは可能な限り添付ファイルでアップロードしていただくようお願いいたします。）","<< 개요 >>
+
+gridView에 바인딩된 10개의 컬럼 중, 앞의 3개 컬럼과 뒤의 3개 컬럼을 고정하고 싶은데, 방법이 있는지 문의드립니다.
+
+
+
+<< 재현 방법 >>
+
+(재현이 간단해지도록 순서를 명시해 주시면 도움이 됩니다. 관련 소스는 가능한 첨부 파일로 업로드해 주세요.)","<< 개요 >>
+
+gridView에 바인딩하는 10개의 컬럼 중 앞쪽 3개 컬럼과 뒤쪽 3개 컬럼을 고정하고 싶은데, 그 방법에 대해 문의드립니다.
+
+<< 재현 방법 >>
+
+(재현하기 쉽도록 순서를 명시해 주시면 감사하겠습니다. 관련 소스 코드는 가능한 한 첨부 파일로 업로드해 주시기 바랍니다.)"
+13,gridview 헤더에 filter 변경 시 이벤트 캐치 방법1,"<< 개요 >>
+
+안녕하세요. 
+
+gridview 에서 useflterlist를 이용해서 헤더에 filter를 사용하고 있습니다. 
+
+현재 그리드에 조회된 총 개수를 보여주고 있는데....
+
+이 필터가 바뀌면 바뀌었다는 이벤트를 캐치하여 그때 다시 그리드에 조회된 개수를 변경해주고 싶은데....
+
+이 필터가 변경되었다 는걸 어떻게 캐치할 수 잇을까요? 이벤트 목록에 따로 없는거 같아서..여쭤봅니다
+
+
+
+<< 재현 방법 >>
+
+( 재현이 쉽도록 순서를 명시하여 주시면 좋습니다. 관련 소스는 가급적 첨부파일로 올려 주시기 바랍니다.)
+
+
+
+","안녕하세요.
+gridView에 header Filter를 제어하는 이벤트는 현재 지원하지 않으므로, 
+필터가 적용되어 dataList의 값이 변경되는 것을 체크하는 로직으로 구현하시면 될듯합니다.
+dataList의 onbeforecolumnfilterchange 이벤트를 사용해보시기 바랍니다.
+
+감사합니다.",,"<< 概要 >>
+
+こんにちは。
+
+gridviewでusefilterlistを利用してヘッダーにフィルターを使用しています。
+
+現在、グリッドに表示されている総数を表示していますが...
+
+このフィルターが変更された場合、そのイベントをキャッチして、その時に再度グリッドに表示されている数を変更したいのですが...
+
+このフィルターが変更されたことをどうやってキャッチできますか？イベントリストには特にないようなので、お伺いします。
+
+
+
+<< 再現方法 >>
+
+（再現が簡単になるように順序を明示していただけると助かります。関連ソースはできるだけ添付ファイルでアップロードしてください。）","<< 概要 >>
+
+こんにちは。
+
+gridviewでuseflterlistを使用してヘッダーにフィルターを適用しています。
+
+現在、グリッドに表示されている総件数を表示していますが...
+
+このフィルターが変更されたときにイベントをキャッチして、その時点でグリッドに表示されている件数を更新したいのですが...
+
+このフィルターが変更されたことをどのようにキャッチできるでしょうか？イベントリストに特に記載がないようなので、お聞きしたいと思います。
+
+
+
+<< 再現方法 >>
+
+（再現しやすいように手順を明記していただけると助かります。関連するソースコードは可能な限り添付ファイルでアップロードしてください。）","<< 개요 >>
+
+안녕하세요.
+
+gridview에서 usefilterlist를 이용하여 헤더에 필터를 사용하고 있습니다.
+
+현재, 그리드에 표시되고 있는 총수를 표시하고 있습니다만...
+
+이 필터가 변경된 경우, 그 이벤트를 캐치하여, 그때 다시 그리드에 표시되고 있는 수를 변경하고 싶습니다만...
+
+이 필터가 변경된 것을 어떻게 캐치할 수 있습니까? 이벤트 리스트에는 특별히 없는 것 같아서, 여쭙습니다.
+
+
+
+<< 재현 방법 >>
+
+(재현이 간단해지도록 순서를 명시해 주시면 감사하겠습니다. 관련 소스는 가능한 첨부 파일로 업로드해 주십시오.)","<< 개요 >>
+
+안녕하세요.
+
+gridview에서 usefilterlist를 사용하여 헤더에 필터를 적용하고 있습니다.
+
+현재 그리드에 표시되는 총 건수를 표시하고 있지만...
+
+이 필터가 변경되었을 때 이벤트를 캐치하여 그 시점에 그리드에 표시되는 건수를 업데이트하고 싶습니다만...
+
+이 필터가 변경되었음을 어떻게 캐치할 수 있을까요? 이벤트 리스트에 특별히 기재된 것이 없는 것 같아서 문의드립니다.
+
+
+
+<< 재현 방법 >>
+
+(재현하기 쉽도록 절차를 명시해 주시면 감사하겠습니다. 관련 소스 코드는 가능한 한 첨부 파일로 업로드해 주세요.)"
+14,gridview 내부 escape 옵션문의3,"<< 개요 >>
+
+( 기능 문의의 경우 해당 기능의 사용 용도와 목적을 구체적으로 기술해 주시기 바랍니다. )
+gridview 내부 inputType이 textImage인 경우
+escape  = true 옵션이 적용이 안되는듯 합니다.
+
+
+입력하면서 포커스시 <PE> 제대로 표기되지만
+
+입력 후에는  <PE> 부분이 태그로 변경되어 사라집니다
+
+다시 선택하면 <PE>부분은 글자로 표기됩니다
+
+버그인지 제가 잘못 사용하고 있는건지 궁금합니다
+
+inputType이 TEXT나 다른타입의 경우  escape  = true 작동 잘 됩니다.
+
+<< 재현 방법 >>
+
+( 재현이 쉽도록 순서를 명시하여 주시면 좋습니다. 관련 소스는 가급적 첨부파일로 올려 주시기 바랍니다.)
+
+
+
+","안녕하세요.
+type이 textImage인 경우 escape=""True""가 적용되지 않는 것을 확인했습니다.
+해당 기능은 22년 7월 이후 엔진에서 개선되었으며, 요청 시 최신 엔진 전달드리도록 하겠습니다.",,"<< 概要 >>
+
+(機能に関する問い合わせの場合、その機能の使用用途と目的を具体的に記述してください。)
+gridview内のinputTypeがtextImageの場合、
+escape = trueオプションが適用されていないようです。
+
+入力中にフォーカスが当たると<PE>が正しく表示されますが、
+
+入力後には<PE>部分がタグに変換されて消えてしまいます。
+
+再度選択すると<PE>部分は文字として表示されます。
+
+バグなのか、私の使い方が間違っているのか気になります。
+
+inputTypeがTEXTや他のタイプの場合、escape = trueは正常に動作します。
+
+<< 再現方法 >>
+
+(再現が容易になるように手順を明記してください。関連ソースは可能な限り添付ファイルとしてアップロードしてください。)","<< 概要 >>
+
+（機能に関するお問い合わせの場合は、その機能の使用目的と目的を具体的に記述してください。）
+gridview内のinputTypeがtextImageの場合、
+escape = trueオプションが適用されていないようです。
+
+入力中にフォーカスを合わせると<PE>が正しく表示されますが、
+
+入力後は<PE>部分がタグに変更されて消えてしまいます。
+
+再度選択すると<PE>部分は文字として表示されます。
+
+これがバグなのか、私の使用方法が間違っているのか気になります。
+
+inputTypeがTEXTや他のタイプの場合、escape = trueは正常に動作します。
+
+<< 再現方法 >>
+
+（再現しやすいように順序を明記していただけると助かります。関連するソースはできるだけ添付ファイルでアップロードしてください。）","<< 개요 >>
+
+(기능에 관한 문의의 경우, 해당 기능의 사용 용도와 목적을 구체적으로 기재해 주세요.)
+gridview 내의 inputType이 textImage인 경우,
+escape = true 옵션이 적용되지 않는 것 같습니다.
+
+입력 중에 포커스가 맞춰지면 <PE>가 올바르게 표시되지만,
+
+입력 후에는 <PE> 부분이 태그로 변환되어 사라집니다.
+
+다시 선택하면 <PE> 부분이 문자로 표시됩니다.
+
+버그인지, 제 사용 방법이 잘못된 것인지 궁금합니다.
+
+inputType이 TEXT나 다른 타입인 경우, escape = true는 정상적으로 동작합니다.
+
+<< 재현 방법 >>
+
+(재현이 용이하도록 절차를 명시해 주세요. 관련 소스는 가능한 한 첨부 파일로 업로드해 주세요.)","다음은 일본어를 한국어로 번역한 내용입니다:
+
+<< 개요 >>
+
+(기능에 관한 문의인 경우, 해당 기능의 사용 목적과 용도를 구체적으로 기술해 주세요.)
+gridview 내의 inputType이 textImage인 경우,
+escape = true 옵션이 적용되지 않는 것 같습니다.
+
+입력 중 포커스를 맞추면 <PE>가 올바르게 표시되지만,
+
+입력 후에는 <PE> 부분이 태그로 변경되어 사라집니다.
+
+다시 선택하면 <PE> 부분은 문자로 표시됩니다.
+
+이것이 버그인지, 제 사용 방법이 잘못된 것인지 궁금합니다.
+
+inputType이 TEXT나 다른 타입인 경우, escape = true는 정상적으로 작동합니다.
+
+<< 재현 방법 >>
+
+(재현하기 쉽도록 순서를 명시해 주시면 감사하겠습니다. 관련 소스는 가능한 한 첨부 파일로 업로드해 주세요.)"
+15,gridview의 setColumnVisibleColumn api 질문4,"<< 개요 >>
+
+( 기능 문의의 경우 해당 기능의 사용 용도와 목적을 구체적으로 기술해 주시기 바랍니다. )
+
+해당 api를 사용하는데 
+감추려는 컬럼을 3줄로 입력하였는데 마지막 줄만 적용이 됐습니다
+인덱스가 0-5 인데 
+여러건을 감출수는 없나요?
+
+<< 재현 방법 >>
+
+( 재현이 쉽도록 순서를 명시하여 주시면 좋습니다. 관련 소스는 가급적 첨부파일로 올려 주시기 바랍니다.)
+
+
+
+","안녕하세요.
+
+gridView setColumnVisibleColumn(); API 관련하여 테스트 파일 첨부드립니다.
+inputType=""select""에 바인딩 된 dataList type 컬럼 true인 값들을 visible 처리한 테스트 파일입니다.
+
+확인부탁드립니다.
+감사합니다.",,"<< 概要 >>
+
+( 機能に関する問い合わせの場合、その機能の使用用途と目的を具体的に記述してください。)
+
+該当のAPIを使用して、隠したいカラムを3行入力しましたが、最後の行だけが適用されました。
+インデックスが0-5ですが、複数の項目を隠すことはできないのでしょうか？
+
+<< 再現方法 >>
+
+( 再現が容易になるように順序を明示してください。関連ソースはできるだけ添付ファイルとしてアップロードしてください。)","<< 概要 >>
+
+（機能に関するお問い合わせの場合は、その機能の使用目的と目的を具体的に記述してください。）
+
+該当APIを使用する際に、
+非表示にしたい列を3行で入力しましたが、最後の行だけが適用されました。
+インデックスが0-5の場合、
+複数の項目を非表示にすることはできないのでしょうか？
+
+<< 再現方法 >>
+
+（再現しやすいように順序を明記していただけると助かります。関連するソースコードは可能な限り添付ファイルでアップロードしてください。）","<< 개요 >>
+
+( 기능에 관한 문의의 경우, 해당 기능의 사용 용도와 목적을 구체적으로 기재해 주세요.)
+
+해당 API를 사용하여 숨기고 싶은 컬럼을 3행 입력했지만, 마지막 행만 적용되었습니다.
+인덱스가 0-5인데, 여러 항목을 숨길 수 없는 건가요?
+
+<< 재현 방법 >>
+
+( 재현이 용이하도록 순서를 명시해 주세요. 관련 소스는 가능한 첨부 파일로 업로드해 주세요.)","다음은 일본어를 한국어로 번역한 결과입니다:
+
+<< 개요 >>
+
+(기능에 관한 문의의 경우, 해당 기능의 사용 목적과 목적을 구체적으로 기술해 주십시오.)
+
+해당 API를 사용할 때,
+숨기고 싶은 열을 3행으로 입력했지만, 마지막 행만 적용되었습니다.
+인덱스가 0-5인 경우,
+여러 항목을 숨기는 것은 불가능한 것인가요?
+
+<< 재현 방법 >>
+
+(재현하기 쉽도록 순서를 명기해 주시면 감사하겠습니다. 관련된 소스 코드는 가능한 한 첨부 파일로 업로드해 주십시오.)"
+16,[gridView] groupBy() 후 엑셀 다운로드1,"<< 개요 >>
+gridView에서 groupBy()후 해당 그리드데이터를 엑셀 다운로드시 무한로딩 or 무반응
+
+
+
+
+<< 재현 방법 >>
+1) 검색조건의 물품별합계, 창고별합계 선택 - scwin.chk_onchange()
+2) 엑셀버튼 클릭하여 엑셀다운로드 - scwin.fExcelDown()
+
+
+
+
+","안녕하십니까!
+
+그리드 groupby시 엑셀 다운로드를 할때는
+옵션에 groupby=''true' 를 추가해 주시면 될거 같습니다.
+
+-------------------------------------------------------------
+  var options = {};
+  options.fileName = ""excelData.xlsx"";
+  //그리드 그룹바이 옵션 추가
+  options.groupby = ""true"";
+  
+  gridView1.advancedExcelDownload( options );
+-------------------------------------------------------------
+
+소스상에서 공통함수 ef.gridDataDownLoad 함수 안에서 추가해 주신 
+groupby 옵션이 잘 셋팅이 되는지 확인을 해보시기 바랍니다.
+
+그리고 groupby 옵션도 이상이 없는지 확인해 보시면 될거 같습니다.
+
+간단한 테스트 샘플을 첨부 전달드립니다.
+
+감사합니다.
+
+
+감사합니다.
+ ",,"<< 概要 >>
+gridViewでgroupBy()した後、該当グリッドデータをエクセルダウンロードすると無限ローディングまたは無反応
+
+
+
+
+<< 再現方法 >>
+1) 検索条件の物品別合計、倉庫別合計を選択 - scwin.chk_onchange()
+2) エクセルボタンをクリックしてエクセルダウンロード - scwin.fExcelDown()","<< 概要 >>
+gridViewでgroupBy()を実行した後、該当のグリッドデータをエクセルダウンロードする際に無限ローディングまたは無反応が発生する問題
+
+<< 再現方法 >>
+1) 検索条件の「商品別合計」、「倉庫別合計」を選択 - scwin.chk_onchange()
+2) エクセルボタンをクリックしてエクセルダウンロードを実行 - scwin.fExcelDown()","<< 개요 >>
+gridView에서 groupBy()한 후, 해당 그리드 데이터를 엑셀 다운로드하면 무한 로딩 또는 무반응
+
+
+
+
+<< 재현 방법 >>
+1) 검색 조건의 물품별 합계, 창고별 합계를 선택 - scwin.chk_onchange()
+2) 엑셀 버튼을 클릭하여 엑셀 다운로드 - scwin.fExcelDown()","다음은 일본어를 한국어로 번역한 결과입니다:
+
+<< 개요 >>
+gridView에서 groupBy()를 실행한 후, 해당 그리드 데이터를 엑셀 다운로드할 때 무한 로딩 또는 무반응이 발생하는 문제
+
+<< 재현 방법 >>
+1) 검색 조건의 ""상품별 합계"", ""창고별 합계""를 선택 - scwin.chk_onchange()
+2) 엑셀 버튼을 클릭하여 엑셀 다운로드를 실행 - scwin.fExcelDown()"
+17,DataList 데이터를 Gridview로 보여줄 때 행과 열 변경하는 방법 문의3,"<< 개요 >>
+
+간단하게 예시를 하나 들겠습니다.
+[
+    {'id': 'testID1', name: 'testName1', cont1: 'testCont1-1', cont2: 'testCont2-1'},
+    {'id': 'testID2', name: 'testName2', cont1: 'testCont1-2', cont2: 'testCont2-2'},
+    {'id': 'testID3', name: 'testName3', cont1: 'testCont1-3', cont2: 'testCont2-3'},
+    {'id': 'testID4', name: 'testName4', cont1: 'testCont1-4', cont2: 'testCont2-4'},
+    {'id': 'testID5', name: 'testName5', cont1: 'testCont1-5', cont2: 'testCont2-5'},
+    {'id': 'testID6', name: 'testName6', cont1: 'testCont1-6', cont2: 'testCont2-6'},
+]
+
+이런 데이터를 DataList에 담았습니다.
+그리고 저는 gridview로 이렇게 그리고 싶습니다.
+    testName1 testName2 testName3 testName4 testName5 testName6
+ID testID1 testID2 testID3 testID4 testID5 testID6
+CONT1 testCont1-1 testCont1-2 testCont1-3 testCont1-4 testCont1-5 testCont1-6
+CONT2 testCont2-1 testCont2-2 testCont2-3 testCont2-4 testCont2-5 testCont2-6
+
+일반적인 gridview로 datalist에 세팅 후 그릴 때는 위쪽 header엔 해당datalist의 key가 세팅되어 row단위로 데이터가 세팅되는데 전 컬럼 단위로 세팅되게 하고 싶습니다.
+
+방법이 있다면 알려주셨으면 합니다.
+
+
+
+<< 재현 방법 >>
+
+( 재현이 쉽도록 순서를 명시하여 주시면 좋습니다. 관련 소스는 가급적 첨부파일로 올려 주시기 바랍니다.)
+
+
+
+","안녕하세요.
+
+말씀해주신 컬럼 단위로 설정하는 방법은 지원하지않습니다.
+
+감사합니다.",,"<< 概要 >>
+
+簡単に例を一つ挙げます。
+[
+    {'id': 'testID1', name: 'testName1', cont1: 'testCont1-1', cont2: 'testCont2-1'},
+    {'id': 'testID2', name: 'testName2', cont1: 'testCont1-2', cont2: 'testCont2-2'},
+    {'id': 'testID3', name: 'testName3', cont1: 'testCont1-3', cont2: 'testCont2-3'},
+    {'id': 'testID4', name: 'testName4', cont1: 'testCont1-4', cont2: 'testCont2-4'},
+    {'id': 'testID5', name: 'testName5', cont1: 'testCont1-5', cont2: 'testCont2-5'},
+    {'id': 'testID6', name: 'testName6', cont1: 'testCont1-6', cont2: 'testCont2-6'},
+]
+
+このようなデータをDataListに入れました。
+そして、私はgridviewでこのように描きたいです。
+    testName1 testName2 testName3 testName4 testName5 testName6
+ID testID1 testID2 testID3 testID4 testID5 testID6
+CONT1 testCont1-1 testCont1-2 testCont1-3 testCont1-4 testCont1-5 testCont1-6
+CONT2 testCont2-1 testCont2-2 testCont2-3 testCont2-4 testCont2-5 testCont2-6
+
+一般的なgridviewでdatalistに設定後描くときは、上部のheaderには該当datalistのkeyが設定され、row単位でデータが設定されますが、私はcolumn単位で設定されるようにしたいです。
+
+方法があれば教えていただけますか。
+
+
+
+<< 再現方法 >>
+
+( 再現が容易になるように順序を明示していただけると助かります。関連ソースは可能な限り添付ファイルでアップロードしてください。)","<< 概要 >>
+
+簡単に例を一つ挙げます。
+[
+    {'id': 'testID1', name: 'testName1', cont1: 'testCont1-1', cont2: 'testCont2-1'},
+    {'id': 'testID2', name: 'testName2', cont1: 'testCont1-2', cont2: 'testCont2-2'},
+    {'id': 'testID3', name: 'testName3', cont1: 'testCont1-3', cont2: 'testCont2-3'},
+    {'id': 'testID4', name: 'testName4', cont1: 'testCont1-4', cont2: 'testCont2-4'},
+    {'id': 'testID5', name: 'testName5', cont1: 'testCont1-5', cont2: 'testCont2-5'},
+    {'id': 'testID6', name: 'testName6', cont1: 'testCont1-6', cont2: 'testCont2-6'},
+]
+
+このようなデータをDataListに格納しました。
+そして、私はgridviewでこのように描画したいです。
+    testName1 testName2 testName3 testName4 testName5 testName6
+ID testID1 testID2 testID3 testID4 testID5 testID6
+CONT1 testCont1-1 testCont1-2 testCont1-3 testCont1-4 testCont1-5 testCont1-6
+CONT2 testCont2-1 testCont2-2 testCont2-3 testCont2-4 testCont2-5 testCont2-6
+
+一般的なgridviewでdatalistにセット後に描画する場合、上部のヘッダーには該当datalistのkeyがセットされ、行単位でデータがセットされますが、私は列単位でセットされるようにしたいです。
+
+方法があれば教えていただきたいです。
+
+<< 再現方法 >>
+
+（再現が容易になるよう、順序を明記していただけると助かります。関連ソースはできるだけ添付ファイルでアップロードしてください。）","<< 개요 >>
+
+간단히 예를 하나 들겠습니다.
+[
+    {'id': 'testID1', name: 'testName1', cont1: 'testCont1-1', cont2: 'testCont2-1'},
+    {'id': 'testID2', name: 'testName2', cont1: 'testCont1-2', cont2: 'testCont2-2'},
+    {'id': 'testID3', name: 'testName3', cont1: 'testCont1-3', cont2: 'testCont2-3'},
+    {'id': 'testID4', name: 'testName4', cont1: 'testCont1-4', cont2: 'testCont2-4'},
+    {'id': 'testID5', name: 'testName5', cont1: 'testCont1-5', cont2: 'testCont2-5'},
+    {'id': 'testID6', name: 'testName6', cont1: 'testCont1-6', cont2: 'testCont2-6'},
+]
+
+이러한 데이터를 DataList에 넣었습니다.
+그리고, 저는 gridview에서 이렇게 그리고 싶습니다.
+    testName1 testName2 testName3 testName4 testName5 testName6
+ID testID1 testID2 testID3 testID4 testID5 testID6
+CONT1 testCont1-1 testCont1-2 testCont1-3 testCont1-4 testCont1-5 testCont1-6
+CONT2 testCont2-1 testCont2-2 testCont2-3 testCont2-4 testCont2-5 testCont2-6
+
+일반적인 gridview에서 datalist에 설정 후 그릴 때는, 상단의 header에는 해당 datalist의 key가 설정되고, row 단위로 데이터가 설정되지만, 저는 column 단위로 설정되도록 하고 싶습니다.
+
+방법이 있으면 알려주시겠습니까?
+
+
+
+<< 재현 방법 >>
+
+( 재현이 용이하도록 순서를 명시해 주시면 도움이 됩니다. 관련 소스는 가능한 한 첨부 파일로 업로드해 주십시오.)","<< 개요 >>
+
+간단히 예를 하나 들겠습니다.
+[
+    {'id': 'testID1', name: 'testName1', cont1: 'testCont1-1', cont2: 'testCont2-1'},
+    {'id': 'testID2', name: 'testName2', cont1: 'testCont1-2', cont2: 'testCont2-2'},
+    {'id': 'testID3', name: 'testName3', cont1: 'testCont1-3', cont2: 'testCont2-3'},
+    {'id': 'testID4', name: 'testName4', cont1: 'testCont1-4', cont2: 'testCont2-4'},
+    {'id': 'testID5', name: 'testName5', cont1: 'testCont1-5', cont2: 'testCont2-5'},
+    {'id': 'testID6', name: 'testName6', cont1: 'testCont1-6', cont2: 'testCont2-6'},
+]
+
+이와 같은 데이터를 DataList에 저장했습니다.
+그리고 저는 gridview에서 이렇게 렌더링하고 싶습니다.
+    testName1 testName2 testName3 testName4 testName5 testName6
+ID testID1 testID2 testID3 testID4 testID5 testID6
+CONT1 testCont1-1 testCont1-2 testCont1-3 testCont1-4 testCont1-5 testCont1-6
+CONT2 testCont2-1 testCont2-2 testCont2-3 testCont2-4 testCont2-5 testCont2-6
+
+일반적인 gridview에서 datalist에 설정 후 렌더링할 경우, 상단 헤더에는 해당 datalist의 key가 설정되고 행 단위로 데이터가 설정되지만, 저는 열 단위로 설정되도록 하고 싶습니다.
+
+방법이 있다면 알려주시면 감사하겠습니다.
+
+<< 재현 방법 >>
+
+(재현이 쉽도록 순서를 명시해 주시면 도움이 됩니다. 관련 소스는 가능한 첨부 파일로 업로드해 주세요.)"
+18,gridview의 setColumnVisibleColumn api 질문4,"<< 개요 >>
+
+( 기능 문의의 경우 해당 기능의 사용 용도와 목적을 구체적으로 기술해 주시기 바랍니다. )
+
+해당 api를 사용하는데 
+감추려는 컬럼을 3줄로 입력하였는데 마지막 줄만 적용이 됐습니다
+인덱스가 0-5 인데 
+여러건을 감출수는 없나요?
+
+<< 재현 방법 >>
+
+( 재현이 쉽도록 순서를 명시하여 주시면 좋습니다. 관련 소스는 가급적 첨부파일로 올려 주시기 바랍니다.)
+
+
+
+","안녕하세요.
+
+gridView setColumnVisibleColumn(); API 관련하여 테스트 파일 첨부드립니다.
+inputType=""select""에 바인딩 된 dataList type 컬럼 true인 값들을 visible 처리한 테스트 파일입니다.
+
+확인부탁드립니다.
+감사합니다.",,"<< 概要 >>
+
+( 機能に関する問い合わせの場合、その機能の使用用途と目的を具体的に記述してください。)
+
+該当のAPIを使用して、隠したいカラムを3行入力しましたが、最後の行だけが適用されました。
+インデックスが0-5ですが、複数の項目を隠すことはできないのでしょうか？
+
+<< 再現方法 >>
+
+( 再現が容易になるように順序を明示してください。関連ソースは可能な限り添付ファイルとしてアップロードしてください。)","<< 概要 >>
+
+（機能に関するお問い合わせの場合は、その機能の使用目的と目的を具体的に記述してください。）
+
+該当APIを使用する際に、
+非表示にしたい列を3行で入力しましたが、最後の行だけが適用されました。
+インデックスが0-5の場合、
+複数の項目を非表示にすることはできないのでしょうか？
+
+<< 再現方法 >>
+
+（再現しやすいように順序を明記していただけると助かります。関連するソースコードは可能な限り添付ファイルでアップロードしてください。）","<< 개요 >>
+
+( 기능에 관한 문의의 경우, 해당 기능의 사용 용도와 목적을 구체적으로 기재해 주세요.)
+
+해당 API를 사용하여 숨기고 싶은 컬럼을 3행 입력했지만, 마지막 행만 적용되었습니다.
+인덱스가 0-5인데, 여러 항목을 숨길 수 없는 건가요?
+
+<< 재현 방법 >>
+
+( 재현이 용이하도록 순서를 명시해 주세요. 관련 소스는 가능한 한 첨부 파일로 업로드해 주세요.)","다음은 일본어를 한국어로 번역한 결과입니다:
+
+<< 개요 >>
+
+(기능에 관한 문의의 경우, 해당 기능의 사용 목적과 목적을 구체적으로 기술해 주십시오.)
+
+해당 API를 사용할 때,
+숨기고 싶은 열을 3행으로 입력했지만, 마지막 행만 적용되었습니다.
+인덱스가 0-5인 경우,
+여러 항목을 숨기는 것은 불가능한 것인가요?
+
+<< 재현 방법 >>
+
+(재현하기 쉽도록 순서를 명기해 주시면 감사하겠습니다. 관련된 소스 코드는 가능한 한 첨부 파일로 업로드해 주십시오.)"
+19,[gridView] groupBy() 후 엑셀 다운로드1,"<< 개요 >>
+gridView에서 groupBy()후 해당 그리드데이터를 엑셀 다운로드시 무한로딩 or 무반응
+
+
+
+
+<< 재현 방법 >>
+1) 검색조건의 물품별합계, 창고별합계 선택 - scwin.chk_onchange()
+2) 엑셀버튼 클릭하여 엑셀다운로드 - scwin.fExcelDown()
+
+
+
+
+","안녕하십니까!
+
+그리드 groupby시 엑셀 다운로드를 할때는
+옵션에 groupby=''true' 를 추가해 주시면 될거 같습니다.
+
+-------------------------------------------------------------
+  var options = {};
+  options.fileName = ""excelData.xlsx"";
+  //그리드 그룹바이 옵션 추가
+  options.groupby = ""true"";
+  
+  gridView1.advancedExcelDownload( options );
+-------------------------------------------------------------
+
+소스상에서 공통함수 ef.gridDataDownLoad 함수 안에서 추가해 주신 
+groupby 옵션이 잘 셋팅이 되는지 확인을 해보시기 바랍니다.
+
+그리고 groupby 옵션도 이상이 없는지 확인해 보시면 될거 같습니다.
+
+간단한 테스트 샘플을 첨부 전달드립니다.
+
+감사합니다.
+
+
+감사합니다.
+ ",,"<< 概要 >>
+gridViewでgroupBy()を実行した後、該当グリッドデータをエクセルダウンロードすると無限ロードまたは無反応
+
+
+
+
+<< 再現方法 >>
+1) 検索条件の物品別合計、倉庫別合計を選択 - scwin.chk_onchange()
+2) エクセルボタンをクリックしてエクセルダウンロード - scwin.fExcelDown()","<< 概要 >>
+gridViewでgroupBy()を実行した後、該当のグリッドデータをエクセルダウンロードする際に無限ローディングまたは無反応が発生する問題
+
+<< 再現方法 >>
+1) 検索条件の「商品別合計」、「倉庫別合計」を選択 - scwin.chk_onchange()
+2) エクセルボタンをクリックしてエクセルダウンロードを実行 - scwin.fExcelDown()","<< 개요 >>
+gridView에서 groupBy()를 실행한 후, 해당 그리드 데이터를 엑셀 다운로드하면 무한 로드 또는 무반응
+
+
+
+
+<< 재현 방법 >>
+1) 검색 조건의 물품별 합계, 창고별 합계를 선택 - scwin.chk_onchange()
+2) 엑셀 버튼을 클릭하여 엑셀 다운로드 - scwin.fExcelDown()","다음은 일본어를 한국어로 번역한 결과입니다:
+
+<< 개요 >>
+gridView에서 groupBy()를 실행한 후, 해당 그리드 데이터를 엑셀 다운로드할 때 무한 로딩 또는 무반응이 발생하는 문제
+
+<< 재현 방법 >>
+1) 검색 조건의 ""상품별 합계"", ""창고별 합계""를 선택 - scwin.chk_onchange()
+2) 엑셀 버튼을 클릭하여 엑셀 다운로드를 실행 - scwin.fExcelDown()"
+20,DataList 데이터를 Gridview로 보여줄 때 행과 열 변경하는 방법 문의3,"<< 개요 >>
+
+간단하게 예시를 하나 들겠습니다.
+[
+    {'id': 'testID1', name: 'testName1', cont1: 'testCont1-1', cont2: 'testCont2-1'},
+    {'id': 'testID2', name: 'testName2', cont1: 'testCont1-2', cont2: 'testCont2-2'},
+    {'id': 'testID3', name: 'testName3', cont1: 'testCont1-3', cont2: 'testCont2-3'},
+    {'id': 'testID4', name: 'testName4', cont1: 'testCont1-4', cont2: 'testCont2-4'},
+    {'id': 'testID5', name: 'testName5', cont1: 'testCont1-5', cont2: 'testCont2-5'},
+    {'id': 'testID6', name: 'testName6', cont1: 'testCont1-6', cont2: 'testCont2-6'},
+]
+
+이런 데이터를 DataList에 담았습니다.
+그리고 저는 gridview로 이렇게 그리고 싶습니다.
+    testName1 testName2 testName3 testName4 testName5 testName6
+ID testID1 testID2 testID3 testID4 testID5 testID6
+CONT1 testCont1-1 testCont1-2 testCont1-3 testCont1-4 testCont1-5 testCont1-6
+CONT2 testCont2-1 testCont2-2 testCont2-3 testCont2-4 testCont2-5 testCont2-6
+
+일반적인 gridview로 datalist에 세팅 후 그릴 때는 위쪽 header엔 해당datalist의 key가 세팅되어 row단위로 데이터가 세팅되는데 전 컬럼 단위로 세팅되게 하고 싶습니다.
+
+방법이 있다면 알려주셨으면 합니다.
+
+
+
+<< 재현 방법 >>
+
+( 재현이 쉽도록 순서를 명시하여 주시면 좋습니다. 관련 소스는 가급적 첨부파일로 올려 주시기 바랍니다.)
+
+
+
+","안녕하세요.
+
+말씀해주신 컬럼 단위로 설정하는 방법은 지원하지않습니다.
+
+감사합니다.",,"<< 概要 >>
+
+簡単に例を一つ挙げます。
+[
+    {'id': 'testID1', name: 'testName1', cont1: 'testCont1-1', cont2: 'testCont2-1'},
+    {'id': 'testID2', name: 'testName2', cont1: 'testCont1-2', cont2: 'testCont2-2'},
+    {'id': 'testID3', name: 'testName3', cont1: 'testCont1-3', cont2: 'testCont2-3'},
+    {'id': 'testID4', name: 'testName4', cont1: 'testCont1-4', cont2: 'testCont2-4'},
+    {'id': 'testID5', name: 'testName5', cont1: 'testCont1-5', cont2: 'testCont2-5'},
+    {'id': 'testID6', name: 'testName6', cont1: 'testCont1-6', cont2: 'testCont2-6'},
+]
+
+このようなデータをDataListに入れました。
+そして、私はgridviewでこのように描画したいです。
+    testName1 testName2 testName3 testName4 testName5 testName6
+ID testID1 testID2 testID3 testID4 testID5 testID6
+CONT1 testCont1-1 testCont1-2 testCont1-3 testCont1-4 testCont1-5 testCont1-6
+CONT2 testCont2-1 testCont2-2 testCont2-3 testCont2-4 testCont2-5 testCont2-6
+
+一般的なgridviewでdatalistに設定後描画する場合、上部のヘッダーには該当datalistのkeyが設定され、行単位でデータが設定されますが、私は列単位で設定されるようにしたいです。
+
+方法があれば教えていただけますか。
+
+
+
+<< 再現方法 >>
+
+(再現が容易になるように順序を明示していただけると助かります。関連ソースは可能な限り添付ファイルでアップロードしてください。)","<< 概要 >>
+
+簡単に例を一つ挙げます。
+[
+    {'id': 'testID1', name: 'testName1', cont1: 'testCont1-1', cont2: 'testCont2-1'},
+    {'id': 'testID2', name: 'testName2', cont1: 'testCont1-2', cont2: 'testCont2-2'},
+    {'id': 'testID3', name: 'testName3', cont1: 'testCont1-3', cont2: 'testCont2-3'},
+    {'id': 'testID4', name: 'testName4', cont1: 'testCont1-4', cont2: 'testCont2-4'},
+    {'id': 'testID5', name: 'testName5', cont1: 'testCont1-5', cont2: 'testCont2-5'},
+    {'id': 'testID6', name: 'testName6', cont1: 'testCont1-6', cont2: 'testCont2-6'},
+]
+
+このようなデータをDataListに格納しました。
+そして、私はgridviewでこのように描画したいです。
+    testName1 testName2 testName3 testName4 testName5 testName6
+ID testID1 testID2 testID3 testID4 testID5 testID6
+CONT1 testCont1-1 testCont1-2 testCont1-3 testCont1-4 testCont1-5 testCont1-6
+CONT2 testCont2-1 testCont2-2 testCont2-3 testCont2-4 testCont2-5 testCont2-6
+
+一般的なgridviewでdatalistにセット後に描画する際は、上部のヘッダーには該当datalistのkeyがセットされ、行単位でデータがセットされますが、私は列単位でセットされるようにしたいです。
+
+方法があれば教えていただきたいです。
+
+<< 再現方法 >>
+
+（再現が容易になるよう、順序を明記していただけると助かります。関連ソースはできるだけ添付ファイルでアップロードしてください。）","<< 개요 >>
+
+간단히 예를 하나 들겠습니다.
+[
+    {'id': 'testID1', name: 'testName1', cont1: 'testCont1-1', cont2: 'testCont2-1'},
+    {'id': 'testID2', name: 'testName2', cont1: 'testCont1-2', cont2: 'testCont2-2'},
+    {'id': 'testID3', name: 'testName3', cont1: 'testCont1-3', cont2: 'testCont2-3'},
+    {'id': 'testID4', name: 'testName4', cont1: 'testCont1-4', cont2: 'testCont2-4'},
+    {'id': 'testID5', name: 'testName5', cont1: 'testCont1-5', cont2: 'testCont2-5'},
+    {'id': 'testID6', name: 'testName6', cont1: 'testCont1-6', cont2: 'testCont2-6'},
+]
+
+이러한 데이터를 DataList에 넣었습니다.
+그리고, 저는 gridview에서 이렇게 그리기를 원합니다.
+    testName1 testName2 testName3 testName4 testName5 testName6
+ID testID1 testID2 testID3 testID4 testID5 testID6
+CONT1 testCont1-1 testCont1-2 testCont1-3 testCont1-4 testCont1-5 testCont1-6
+CONT2 testCont2-1 testCont2-2 testCont2-3 testCont2-4 testCont2-5 testCont2-6
+
+일반적인 gridview에서 datalist에 설정 후 그릴 경우, 상단의 헤더에는 해당 datalist의 key가 설정되고, 행 단위로 데이터가 설정되지만, 저는 열 단위로 설정되도록 하고 싶습니다.
+
+방법이 있다면 알려주시겠습니까?
+
+
+
+<< 재현 방법 >>
+
+(재현이 용이하도록 순서를 명시해 주시면 도움이 되겠습니다. 관련 소스는 가능한 한 첨부 파일로 업로드해 주십시오.)","<< 개요 >>
+
+간단히 예를 하나 들겠습니다.
+[
+    {'id': 'testID1', name: 'testName1', cont1: 'testCont1-1', cont2: 'testCont2-1'},
+    {'id': 'testID2', name: 'testName2', cont1: 'testCont1-2', cont2: 'testCont2-2'},
+    {'id': 'testID3', name: 'testName3', cont1: 'testCont1-3', cont2: 'testCont2-3'},
+    {'id': 'testID4', name: 'testName4', cont1: 'testCont1-4', cont2: 'testCont2-4'},
+    {'id': 'testID5', name: 'testName5', cont1: 'testCont1-5', cont2: 'testCont2-5'},
+    {'id': 'testID6', name: 'testName6', cont1: 'testCont1-6', cont2: 'testCont2-6'},
+]
+
+이와 같은 데이터를 DataList에 저장했습니다.
+그리고 저는 gridview에서 이렇게 렌더링하고 싶습니다.
+    testName1 testName2 testName3 testName4 testName5 testName6
+ID testID1 testID2 testID3 testID4 testID5 testID6
+CONT1 testCont1-1 testCont1-2 testCont1-3 testCont1-4 testCont1-5 testCont1-6
+CONT2 testCont2-1 testCont2-2 testCont2-3 testCont2-4 testCont2-5 testCont2-6
+
+일반적인 gridview에서 datalist에 설정 후 렌더링할 때는 상단 헤더에 해당 datalist의 key가 설정되고, 행 단위로 데이터가 설정되지만, 저는 열 단위로 설정되도록 하고 싶습니다.
+
+방법이 있다면 알려주시면 감사하겠습니다.
+
+<< 재현 방법 >>
+
+(재현이 쉽도록 순서를 명시해 주시면 도움이 됩니다. 관련 소스는 가능한 첨부 파일로 업로드해 주세요.)"
+21,gridView fixedColumn 문의1,"<< 개요 >>
+
+gridView 에 바인딩하는 10개의 컬럼중 앞에 3개의 컬럼과 뒤에 3개의 컬럼을 고정하고 싶은데 방법이 있는지 문의 드립니다.
+
+
+
+<< 재현 방법 >>
+
+( 재현이 쉽도록 순서를 명시하여 주시면 좋습니다. 관련 소스는 가급적 첨부파일로 올려 주시기 바랍니다.)
+
+
+
+","안녕하세요.
+
+해당 gridView에 fixedColumn, fixedRightColumn 속성을 설정해주시면 됩니다.
+
+// 속성 설정 예시
+<w2:gridView fixedColumn=""3"" fixedRightColumn=""3"" ....
+
+추가로 프로젝트명 기입 부탁드립니다.
+감사합니다.",,"<< 概要 >>
+
+gridViewにバインドする10個のカラムのうち、前の3つのカラムと後ろの3つのカラムを固定したいのですが、方法があるかどうかお問い合わせします。
+
+
+
+<< 再現方法 >>
+
+（再現が簡単になるように順序を明示していただけると助かります。関連ソースはできるだけ添付ファイルでアップロードしてください。）","<< 概要 >>
+
+gridViewにバインドする10個のカラムのうち、前の3つのカラムと後ろの3つのカラムを固定したいのですが、その方法について問い合わせいたします。
+
+<< 再現方法 >>
+
+（再現しやすいように順序を明記していただけると助かります。関連するソースコードは可能な限り添付ファイルでアップロードしていただくようお願いいたします。）","<< 개요 >>
+
+gridView에 바인딩된 10개의 컬럼 중, 앞의 3개 컬럼과 뒤의 3개 컬럼을 고정하고 싶은데, 방법이 있는지 문의드립니다.
+
+
+
+<< 재현 방법 >>
+
+(재현이 간단해지도록 순서를 명시해 주시면 도움이 됩니다. 관련 소스는 가능한 첨부 파일로 업로드해 주세요.)","<< 개요 >>
+
+gridView에 바인딩하는 10개의 컬럼 중 앞쪽 3개 컬럼과 뒤쪽 3개 컬럼을 고정하고 싶은데, 그 방법에 대해 문의드립니다.
+
+<< 재현 방법 >>
+
+(재현하기 쉽도록 순서를 명시해 주시면 감사하겠습니다. 관련 소스 코드는 가능한 한 첨부 파일로 업로드해 주시기 바랍니다.)"
+22,gridview 헤더에 filter 변경 시 이벤트 캐치 방법1,,"안녕하세요.
+gridView에 header Filter를 제어하는 이벤트는 현재 지원하지 않으므로, 
+필터가 적용되어 dataList의 값이 변경되는 것을 체크하는 로직으로 구현하시면 될듯합니다.
+dataList의 onbeforecolumnfilterchange 이벤트를 사용해보시기 바랍니다.
+
+감사합니다.",,,,,
+23,gridview 내부 escape 옵션문의3,"<< 개요 >>
+
+( 기능 문의의 경우 해당 기능의 사용 용도와 목적을 구체적으로 기술해 주시기 바랍니다. )
+gridview 내부 inputType이 textImage인 경우
+escape  = true 옵션이 적용이 안되는듯 합니다.
+
+
+입력하면서 포커스시 <PE> 제대로 표기되지만
+
+입력 후에는  <PE> 부분이 태그로 변경되어 사라집니다
+
+다시 선택하면 <PE>부분은 글자로 표기됩니다
+
+버그인지 제가 잘못 사용하고 있는건지 궁금합니다
+
+inputType이 TEXT나 다른타입의 경우  escape  = true 작동 잘 됩니다.
+
+<< 재현 방법 >>
+
+( 재현이 쉽도록 순서를 명시하여 주시면 좋습니다. 관련 소스는 가급적 첨부파일로 올려 주시기 바랍니다.)
+
+
+
+","안녕하세요.
+type이 textImage인 경우 escape=""True""가 적용되지 않는 것을 확인했습니다.
+해당 기능은 22년 7월 이후 엔진에서 개선되었으며, 요청 시 최신 엔진 전달드리도록 하겠습니다.",,"<< 概要 >>
+
+( 機能に関する問い合わせの場合、その機能の使用用途と目的を具体的に記述してください。)
+gridview 内部の inputType が textImage の場合、
+escape = true オプションが適用されていないようです。
+
+入力中にフォーカスが当たると <PE> が正しく表示されますが、
+
+入力後には <PE> 部分がタグに変換されて消えてしまいます。
+
+再度選択すると <PE> 部分は文字として表示されます。
+
+バグなのか、私の使い方が間違っているのか知りたいです。
+
+inputType が TEXT や他のタイプの場合、escape = true は正常に動作します。
+
+<< 再現方法 >>
+
+( 再現が容易になるように手順を明示してください。関連ソースは可能な限り添付ファイルとしてアップロードしてください。)","<< 概要 >>
+
+（機能に関するお問い合わせの場合は、その機能の使用目的と目的を具体的に記述してください。）
+gridview内のinputTypeがtextImageの場合、
+escape = trueオプションが適用されていないようです。
+
+入力中にフォーカスを合わせると<PE>が正しく表示されますが、
+
+入力後は<PE>部分がタグに変更されて消えてしまいます。
+
+再度選択すると<PE>部分は文字として表示されます。
+
+これがバグなのか、私の使用方法が間違っているのか気になります。
+
+inputTypeがTEXTや他のタイプの場合、escape = trueは正常に動作します。
+
+<< 再現方法 >>
+
+（再現しやすいように順序を明記していただけると助かります。関連するソースはできるだけ添付ファイルでアップロードしてください。）","<< 개요 >>
+
+( 기능에 관한 문의의 경우, 해당 기능의 사용 용도와 목적을 구체적으로 기재해 주세요.)
+gridview 내부의 inputType이 textImage인 경우,
+escape = true 옵션이 적용되지 않는 것 같습니다.
+
+입력 중에 포커스가 맞춰지면 <PE>가 올바르게 표시되지만,
+
+입력 후에는 <PE> 부분이 태그로 변환되어 사라집니다.
+
+다시 선택하면 <PE> 부분이 문자로 표시됩니다.
+
+버그인지, 제 사용 방법이 잘못된 것인지 알고 싶습니다.
+
+inputType이 TEXT나 다른 타입인 경우, escape = true는 정상적으로 동작합니다.
+
+<< 재현 방법 >>
+
+( 재현이 용이하도록 절차를 명시해 주세요. 관련 소스는 가능한 한 첨부 파일로 업로드해 주세요.)","다음은 일본어를 한국어로 번역한 내용입니다:
+
+<< 개요 >>
+
+(기능에 관한 문의인 경우, 해당 기능의 사용 목적과 용도를 구체적으로 기술해 주세요.)
+gridview 내의 inputType이 textImage인 경우,
+escape = true 옵션이 적용되지 않는 것 같습니다.
+
+입력 중 포커스를 맞추면 <PE>가 올바르게 표시되지만,
+
+입력 후에는 <PE> 부분이 태그로 변경되어 사라집니다.
+
+다시 선택하면 <PE> 부분은 문자로 표시됩니다.
+
+이것이 버그인지, 제 사용 방법이 잘못된 것인지 궁금합니다.
+
+inputType이 TEXT나 다른 타입인 경우, escape = true는 정상적으로 작동합니다.
+
+<< 재현 방법 >>
+
+(재현하기 쉽도록 순서를 명시해 주시면 감사하겠습니다. 관련 소스는 가능한 한 첨부 파일로 업로드해 주세요.)"
+24,"GridView 셀값이 ""0""->""""로 변경될 때 rowStatus가 변경되지 않는 문제2","<< 개요 >>
+
+( 기능 문의의 경우 해당 기능의 사용 용도와 목적을 구체적으로 기술해 주시기 바랍니다. )
+
+GridView 셀의 값이 0인 상태에서 0을 지우고 빈 셀로 만들면 rowStatus가 'U'로 변경되지 않고 'R'로 유지되는 현상이 있습니다.
+1. DataList 컬럼의 ignoreStatus = false인 상태
+2. DataList 컬럼의 dataType = text, GridView의 셀 property에서 dataType = text인 경우
+3. DataList 컬럼의 dataType = number, GridView의 셀 property에서 dataType = number인 경우
+1~3의 조건에서 동일한 현상이 발생합니다.
+셀의 값이 ""0"" -> """"으로 변경됐지만 rowStatus가 변경되지 않아 변경값의 유효성 체크에 어려움이 있는데
+이 경우 rowStatus가 변경되지 않는 건 의도적인 건가요? 별도의 체크 로직을 작성해야 할지 아니면 다른 property 등 설정값 변경으로 해결할 수 있는지 문의드립니다.
+
+
+
+
+<< 재현 방법 >>
+
+( 재현이 쉽도록 순서를 명시하여 주시면 좋습니다. 관련 소스는 가급적 첨부파일로 올려 주시기 바랍니다.)
+
+
+
+","안녕하십니까!
+
+해당버전에서 테스트 결과 이상이 없어보입니다.
+테스트한 샘플 파일을 첨부하니 테스트 해 보시기 바랍니다.
+
+1. 그리드 셀의 값을 0 으로 셋팅
+2. 그리드 셀의 값 0 을 삭제 """" 스트링으로 변경
+3. 해당 행의 상태가 U로 변경됨
+
+테스트 방법이 틀리거나 추가 문의 사항이 있으면 회신부탁드립니다.
+감사합니다.샘플파일이 첨부가 안되서 텍스트로 답변 드립니다.
+-------------------------------------------------------------------
+
+<w2:dataCollection baseNode=""map"">
+                <w2:dataList baseNode=""list"" repeatNode=""map"" id=""dataList1"" saveRemovedData=""true"">
+                    <w2:columnInfo>
+                        <w2:column id=""col1"" name=""name1"" dataType=""text"" ignoreStatus=""false""></w2:column>
+                        <w2:column id=""col2"" name=""name2"" dataType=""number"" ignoreStatus=""false""></w2:column>
+                        <w2:column id=""col3"" name=""name3"" dataType=""text""></w2:column>
+                    </w2:columnInfo>
+                    <w2:data use=""true"">
+                        <w2:row>
+                            <col1><![CDATA[0]]></col1>
+                            <col2><![CDATA[0]]></col2>
+                        </w2:row>
+                        <w2:row>
+                            <col2><![CDATA[0]]></col2>
+                            <col1><![CDATA[0]]></col1>
+                        </w2:row>
+                        <w2:row></w2:row>
+                    </w2:data>
+                </w2:dataList>
+            </w2:dataCollection>
+
+<w2:gridView id="""" ignoreToggleOnDisabled=""false"" useShiftKey=""true""
+            style=""position: absolute ;left: 66px;top: 77px;width: 617px;height: 278px;"" useFilterList=""false"" scrollByColumn=""false""
+            showSortableUseFilter=""false"" scrollByColumnAdaptive=""false"" summaryAuto=""false"" fixedColumnWithHidden=""true"" summaryOnlyAuto=""false""
+            dataList=""dataList1"" ignoreCellClick=""false"" rowStatusVisible=""true"" rowStatusHeaderValue=""상태"">
+            <w2:caption style="""" id=""caption1"" value=""this is a grid caption.""></w2:caption>
+            <w2:header style="""" id=""header1"">
+                <w2:row style="""" id=""row1"">
+                    <w2:column width=""70"" inputType=""text"" style=""height:20px;"" id=""column5"" blockSelect=""false"" displayMode=""label""
+                        value=""text"">
+                    </w2:column>
+                    <w2:column width=""70"" inputType=""text"" style=""height:20px;"" id=""column3"" blockSelect=""false"" displayMode=""label""
+                        value=""number"">
+                    </w2:column>
+                    <w2:column width=""70"" inputType=""text"" style=""height:20px;"" id=""column1"" blockSelect=""false"" displayMode=""label""
+                        value=""name3"">
+                    </w2:column>
+                </w2:row>
+            </w2:header>
+            <w2:gBody style="""" id=""gBody1"">
+                <w2:row style="""" id=""row2"">
+                    <w2:column width=""70"" inputType=""text"" style=""height:20px"" id=""col1"" blockSelect=""false"" displayMode=""label"" dataType=""text""></w2:column>
+                    <w2:column width=""70"" inputType=""text"" style=""height:20px"" id=""col2"" blockSelect=""false"" displayMode=""label"" dataType=""number""></w2:column>
+                    <w2:column width=""70"" inputType=""text"" style=""height:20px"" id=""col3"" blockSelect=""false"" displayMode=""label""></w2:column>
+                </w2:row>
+            </w2:gBody>
+        </w2:gridView>
+
+
+
+-------------------------------------------------------------------",,"<< 概要 >>
+
+( 機能に関する問い合わせの場合、その機能の使用用途と目的を具体的に記述してください。)
+
+GridViewセルの値が0の状態で0を消して空のセルにすると、rowStatusが'U'に変更されずに'R'のままになる現象があります。
+1. DataListカラムのignoreStatus = falseの状態
+2. DataListカラムのdataType = text、GridViewのセルプロパティでdataType = textの場合
+3. DataListカラムのdataType = number、GridViewのセルプロパティでdataType = numberの場合
+1～3の条件で同じ現象が発生します。
+セルの値が""0"" -> """"に変更されましたが、rowStatusが変更されず、変更値の有効性チェックが難しいのですが、
+この場合、rowStatusが変更されないのは意図的なものですか？別途チェックロジックを作成する必要があるのか、それとも他のプロパティなど設定値の変更で解決できるのか問い合わせます。
+
+
+
+<< 再現方法 >>
+
+( 再現が容易になるように順序を明示してください。関連ソースはできるだけ添付ファイルでアップロードしてください。)","<< 概要 >>
+
+（機能に関するお問い合わせの場合は、その機能の使用目的と目的を具体的に記述してください。）
+
+GridViewのセルの値が0の状態で0を消して空のセルにすると、rowStatusが'U'に変更されず'R'のままになる現象があります。
+1. DataListカラムのignoreStatus = falseの状態
+2. DataListカラムのdataType = text、GridViewのセルプロパティでdataType = textの場合
+3. DataListカラムのdataType = number、GridViewのセルプロパティでdataType = numberの場合
+1〜3の条件で同じ現象が発生します。
+セルの値が""0"" -> """"に変更されましたが、rowStatusが変更されないため、変更値の有効性チェックが困難です。
+この場合、rowStatusが変更されないのは意図的なものでしょうか？別途チェックロジックを作成する必要があるのか、それとも他のプロパティなどの設定値変更で解決できるのかお問い合わせいたします。
+
+
+
+
+<< 再現方法 >>
+
+（再現しやすいように順序を明記していただけると助かります。関連ソースはできるだけ添付ファイルでアップロードしてください。）","<< 개요 >>
+
+( 기능에 관한 문의의 경우, 해당 기능의 사용 용도와 목적을 구체적으로 기재해 주세요.)
+
+GridView 셀의 값이 0인 상태에서 0을 지우고 빈 셀로 만들면, rowStatus가 'U'로 변경되지 않고 'R'인 상태로 남아 있는 현상이 있습니다.
+1. DataList 컬럼의 ignoreStatus = false 상태
+2. DataList 컬럼의 dataType = text, GridView의 셀 프로퍼티에서 dataType = text인 경우
+3. DataList 컬럼의 dataType = number, GridView의 셀 프로퍼티에서 dataType = number인 경우
+1~3의 조건에서 동일한 현상이 발생합니다.
+셀의 값이 ""0"" -> """"로 변경되었지만, rowStatus가 변경되지 않아 변경 값의 유효성 체크가 어려운데,
+이 경우, rowStatus가 변경되지 않는 것이 의도된 것인지요? 별도의 체크 로직을 작성해야 하는지, 아니면 다른 프로퍼티 등의 설정 값 변경으로 해결할 수 있는지 문의드립니다.
+
+<< 재현 방법 >>
+
+( 재현이 용이하도록 순서를 명시해 주세요. 관련 소스는 가능한 첨부 파일로 업로드해 주세요.)","<< 개요 >>
+
+(기능에 관한 문의의 경우, 해당 기능의 사용 목적과 목적을 구체적으로 기술해 주세요.)
+
+GridView의 셀 값이 0인 상태에서 0을 지우고 빈 셀로 만들면, rowStatus가 'U'로 변경되지 않고 'R' 상태로 유지되는 현상이 있습니다.
+1. DataList 컬럼의 ignoreStatus = false 상태
+2. DataList 컬럼의 dataType = text, GridView의 셀 속성에서 dataType = text인 경우
+3. DataList 컬럼의 dataType = number, GridView의 셀 속성에서 dataType = number인 경우
+1~3의 조건에서 동일한 현상이 발생합니다.
+셀의 값이 ""0"" -> """"로 변경되었지만, rowStatus가 변경되지 않아 변경 값의 유효성 검사가 어렵습니다.
+이 경우, rowStatus가 변경되지 않는 것이 의도적인 것인지요? 별도의 체크 로직을 만들어야 하는지, 아니면 다른 속성 등의 설정값 변경으로 해결할 수 있는지 문의드립니다.
+
+
+
+
+<< 재현 방법 >>
+
+(재현하기 쉽도록 순서를 명시해 주시면 감사하겠습니다. 관련 소스는 가능한 첨부 파일로 업로드해 주세요.)"
+25,gridview header 전체선택 로직 문의1,,"안녕하세요.
+
+checkbox 컬럼에 true 값을 체크하여 true 값이 있는 경우, setHeaderDisabled(); true 적용한 테스트 파일 첨부드립니다.
+테스트 파일 확인부탁드립니다.
+
+감사합니다.",,,,,
+26,gridView filter기능 문의3,"<< 개요 >>
+
+gridView의 useFilter기능을 이용해서 header에 필터를 추가하였습니다. 
+필터기능을 이용하면서 구현하고 싶은 기능이 있는데 혹시 웹스퀘어에서 가능한지 여쭤봅니다.
+
+filter버튼을 눌러 filtering을 하기전에 confirm창을 띄우고 confirm창에서 확인버튼을 눌렀을 경우에만 filter를 걸고싶습니다.
+datalist에 있는 onbeforecolumnfilter를 이용해서 비슷하게 구현하려 했지만 setColumnFilter함수를 호출했을 때도 해당 이벤트가 실행되어 원하는대로 구현되지 않았습니다. 혹시 이와같은 기능을 웹스퀘어로 구현하려면 어떻게 해야할지 문의드립니다.
+
+
+
+<< 재현 방법 >>
+
+1. header에 있는 filter 버튼을 누른다.
+2. filter를 실행하기 전에 confirm창이 뜬다.
+3. confirm창에서 확인버튼을 눌렀을 때만 filter가 실행된다.
+
+
+
+","안녕하세요.
+
+말씀하신 부분을 구현하기 위해서는 gridView 이벤트인 onheaderclick 함수를 이용하시면 됩니다.
+설정하신 useFilter, useFilterList 속성을 전부 false로 주신 후 onheaderclick 함수안에 동적으로 아래와 같이 주시면 됩니다.
+
+scwin.grid1_onheaderclick = function(headerId) {
+    confirm(""클릭"");
+   
+    grid1.setUseFilterList(true);
+    grid1.setUseFilter( ""header0"",true )
+};
+
+감사합니다.답변해주셔서 감사합니다.
+
+알려주신 방법대로 구현해보았으나 제가 원하는 방식과는 조금 다르게 작동하는 것 같습니다.
+onheaderclick 함수에 동적으로 useFilter와 useFilterList 속성을 주니까 filter 기능을 추가할지 말지 자체는 동적으로 잘 작동합니다.
+
+하지만 제가 원했던 동작은
+1. 필터버튼을 클릭해 하단에 필터링 할 수 있는 창이 나타나고,
+2. 하단에 뜨는 리스트 중 하나의 체크박스를 선택한 후
+3. 실제로 datalist에 필터링이 되기 전에 confirm창을 띄워 확인 버튼을 클릭했을 경우에만 필터를 적용하고 싶습니다.
+
+혹시 이와같은 동작은 어떻게 구현해야 할까요??
+
+감사합니다.
+ ",,"<< 概要 >>
+
+gridViewのuseFilter機能を利用してheaderにフィルターを追加しました。
+フィルター機能を利用しながら実装したい機能があるのですが、ウェブスクエアで可能かどうかお伺いします。
+
+filterボタンを押してフィルタリングを行う前にconfirmウィンドウを表示し、confirmウィンドウで確認ボタンを押した場合にのみフィルターをかけたいです。
+datalistにあるonbeforecolumnfilterを利用して似たような実装を試みましたが、setColumnFilter関数を呼び出したときにも該当イベントが実行され、思うように実装できませんでした。このような機能をウェブスクエアで実装するにはどうすればよいかご教示ください。
+
+
+
+<< 再現方法 >>
+
+1. headerにあるfilterボタンを押す。
+2. filterを実行する前にconfirmウィンドウが表示される。
+3. confirmウィンドウで確認ボタンを押したときのみfilterが実行される。","<< 概要 >>
+
+gridViewのuseFilter機能を利用してヘッダーにフィルターを追加しました。
+フィルター機能を使用しながら実装したい機能があるのですが、ウェブスクエアで可能かどうか伺いたいです。
+
+フィルターボタンを押してフィルタリングを行う前に確認ダイアログを表示し、確認ダイアログで「OK」ボタンを押した場合のみフィルターをかけたいです。
+datalistにあるonbeforecolumnfilterを使用して似たような実装を試みましたが、setColumnFilter関数を呼び出した時もそのイベントが実行されてしまい、望んだ通りに実装できませんでした。このような機能をウェブスクエアで実装するにはどうすればよいか、お問い合わせいたします。
+
+<< 再現方法 >>
+
+1. ヘッダーにあるフィルターボタンを押す。
+2. フィルターを実行する前に確認ダイアログが表示される。
+3. 確認ダイアログで「OK」ボタンを押した時のみフィルターが実行される。","<< 개요 >>
+
+gridView의 useFilter 기능을 이용하여 header에 필터를 추가했습니다.
+필터 기능을 이용하면서 구현하고 싶은 기능이 있는데, 웹스퀘어에서 가능한지 여쭙고 싶습니다.
+
+filter 버튼을 눌러 필터링을 수행하기 전에 confirm 창을 표시하고, confirm 창에서 확인 버튼을 눌렀을 때만 필터를 적용하고 싶습니다.
+datalist에 있는 onbeforecolumnfilter를 이용하여 비슷한 구현을 시도해 보았으나, setColumnFilter 함수를 호출할 때도 해당 이벤트가 실행되어 원하는 대로 구현할 수 없었습니다. 이러한 기능을 웹스퀘어에서 구현하려면 어떻게 해야 하는지 가르쳐 주십시오.
+
+
+
+<< 재현 방법 >>
+
+1. header에 있는 filter 버튼을 누른다.
+2. filter를 실행하기 전에 confirm 창이 표시된다.
+3. confirm 창에서 확인 버튼을 눌렀을 때만 filter가 실행된다.","<< 개요 >>
+
+gridView의 useFilter 기능을 이용하여 헤더에 필터를 추가했습니다.
+필터 기능을 사용하면서 구현하고 싶은 기능이 있는데, 웹스퀘어에서 가능한지 문의드립니다.
+
+필터 버튼을 눌러 필터링을 하기 전에 확인 대화상자를 표시하고, 확인 대화상자에서 ""OK"" 버튼을 눌렀을 경우에만 필터를 적용하고 싶습니다.
+datalist에 있는 onbeforecolumnfilter를 사용하여 비슷한 구현을 시도했지만, setColumnFilter 함수를 호출했을 때도 해당 이벤트가 실행되어 원하는 대로 구현할 수 없었습니다. 이러한 기능을 웹스퀘어에서 구현하려면 어떻게 해야 하는지 문의드립니다.
+
+<< 재현 방법 >>
+
+1. 헤더에 있는 필터 버튼을 누른다.
+2. 필터를 실행하기 전에 확인 대화상자가 표시된다.
+3. 확인 대화상자에서 ""OK"" 버튼을 눌렀을 때만 필터가 실행된다."
+27,gridview 질문입니다3,"<< 개요 >>
+
+( 기능 문의의 경우 해당 기능의 사용 용도와 목적을 구체적으로 기술해 주시기 바랍니다. )
+
+컬럼 property에 defaultValue 설정시 값이 선택 되지 않음
+
+<< 재현 방법 >>
+
+( 재현이 쉽도록 순서를 명시하여 주시면 좋습니다. 관련 소스는 가급적 첨부파일로 올려 주시기 바랍니다.)
+
+사용 여부와, 작업 공장의 설정 및 defaultValue 입력값 설정입니다.
+
+
+
+사용여부 컬럼 USE_YN은 validate 하였습니다
+
+
+다음과 같은 설정일때 저장을 실행하면
+등록시 새로 입력된 row에 label은 매칭되지만
+사용여부(USE_YN) 은 값이 입력되지 않았다고 출력 되고  
+실제로 데이터리스트를 콘솔에 찍어보면 값이 입력 되지 않습니다
+
+
+
+방법을 찾아보니 setColumnDefaultValue()을 이용하면 되긴 되는데
+property에서 설정하는 방법은 없을까요?
+","안녕하세요.
+
+gridView defaultValue 속성은 실제 데이터에 들어가지않고 보여지기만 하고있습니다.
+dataList 해당 컬럼 defaultValue 속성에 입력하여 사용하시면 될 것 같습니다.
+
+감사합니다.",,"<< 概要 >>
+
+( 機能に関する問い合わせの場合、その機能の使用用途と目的を具体的に記述してください。)
+
+カラムプロパティにdefaultValueを設定すると値が選択されない
+
+<< 再現方法 >>
+
+( 再現が容易になるように手順を明示してください。関連ソースは可能な限り添付ファイルとしてアップロードしてください。)
+
+使用の有無と、作業工場の設定およびdefaultValue入力値の設定です。
+
+使用有無カラムUSE_YNはバリデートしました。
+
+次のような設定のとき保存を実行すると、
+登録時に新しく入力されたrowにlabelはマッチしますが、
+使用有無(USE_YN)は値が入力されていないと出力され、
+実際にデータリストをコンソールに出力してみると値が入力されていません。
+
+方法を探してみるとsetColumnDefaultValue()を利用すればできるのですが、
+プロパティで設定する方法はないでしょうか？","<< 概要 >>
+
+（機能に関する問い合わせの場合、その機能の使用目的と目的を具体的に記述してください。）
+
+カラムのプロパティにdefaultValueを設定しても値が選択されない
+
+<< 再現方法 >>
+
+（再現しやすいように順序を明記していただけると助かります。関連するソースはできるだけ添付ファイルでアップロードしてください。）
+
+使用有無と、作業工場の設定およびdefaultValueの入力値設定です。
+
+使用有無カラムUSE_YNはvalidateしました。
+
+次のような設定の時に保存を実行すると、
+登録時に新しく入力された行にラベルは一致しますが、
+使用有無（USE_YN）は値が入力されていないと出力され、
+実際にデータリストをコンソールに出力してみると値が入力されていません。
+
+方法を探してみると、setColumnDefaultValue()を使用すれば動作しますが、
+プロパティで設定する方法はないでしょうか？","<< 개요 >>
+
+( 기능에 관한 문의의 경우, 해당 기능의 사용 용도와 목적을 구체적으로 기재해 주세요.)
+
+컬럼 프로퍼티에 defaultValue를 설정하면 값이 선택되지 않음
+
+<< 재현 방법 >>
+
+( 재현이 용이하도록 절차를 명시해 주세요. 관련 소스는 가능한 한 첨부 파일로 업로드해 주세요.)
+
+사용 여부와 작업 공장의 설정 및 defaultValue 입력 값의 설정입니다.
+
+사용 여부 컬럼 USE_YN은 검증했습니다.
+
+다음과 같은 설정일 때 저장을 실행하면,
+등록 시 새로 입력된 row에 label은 매치되지만,
+사용 여부(USE_YN)는 값이 입력되지 않았다고 출력되며,
+실제로 데이터 리스트를 콘솔에 출력해 보면 값이 입력되지 않았습니다.
+
+방법을 찾아보니 setColumnDefaultValue()를 이용하면 가능하지만,
+프로퍼티로 설정하는 방법은 없을까요?","<< 개요 >>
+
+(기능에 관한 문의의 경우, 그 기능의 사용 목적과 목적을 구체적으로 기술해 주세요.)
+
+컬럼의 프로퍼티에 defaultValue를 설정해도 값이 선택되지 않음
+
+<< 재현 방법 >>
+
+(재현하기 쉽도록 순서를 명시해 주시면 감사하겠습니다. 관련된 소스는 가능한 한 첨부 파일로 업로드해 주세요.)
+
+사용 여부와 작업 공장의 설정 및 defaultValue의 입력값 설정입니다.
+
+사용 여부 컬럼 USE_YN은 validate했습니다.
+
+다음과 같은 설정일 때 저장을 실행하면,
+등록 시 새로 입력된 행에 라벨은 일치하지만,
+사용 여부(USE_YN)는 값이 입력되지 않았다고 출력되며,
+실제로 데이터 리스트를 콘솔에 출력해 보면 값이 입력되어 있지 않습니다.
+
+방법을 찾아보니 setColumnDefaultValue()를 사용하면 동작하지만,
+프로퍼티로 설정하는 방법은 없을까요?"
+28,gridview의 setColumnVisibleColumn api 질문4,"<< 개요 >>
+
+( 기능 문의의 경우 해당 기능의 사용 용도와 목적을 구체적으로 기술해 주시기 바랍니다. )
+
+해당 api를 사용하는데 
+감추려는 컬럼을 3줄로 입력하였는데 마지막 줄만 적용이 됐습니다
+인덱스가 0-5 인데 
+여러건을 감출수는 없나요?
+
+<< 재현 방법 >>
+
+( 재현이 쉽도록 순서를 명시하여 주시면 좋습니다. 관련 소스는 가급적 첨부파일로 올려 주시기 바랍니다.)
+
+
+
+","안녕하세요.
+
+gridView setColumnVisibleColumn(); API 관련하여 테스트 파일 첨부드립니다.
+inputType=""select""에 바인딩 된 dataList type 컬럼 true인 값들을 visible 처리한 테스트 파일입니다.
+
+확인부탁드립니다.
+감사합니다.",,"<< 概要 >>
+
+( 機能に関する問い合わせの場合、その機能の使用用途と目的を具体的に記述してください。)
+
+該当のAPIを使用する際に、隠したいカラムを3行入力しましたが、最後の行だけが適用されました。
+インデックスが0-5ですが、複数の項目を隠すことはできないのでしょうか？
+
+<< 再現方法 >>
+
+( 再現が容易になるように順序を明示してください。関連ソースは可能な限り添付ファイルとしてアップロードしてください。)","<< 概要 >>
+
+（機能に関するお問い合わせの場合は、その機能の使用目的と目的を具体的に記述してください。）
+
+該当APIを使用する際に、
+非表示にしたい列を3行で入力しましたが、最後の行だけが適用されました。
+インデックスが0-5の場合、
+複数の項目を非表示にすることはできないのでしょうか？
+
+<< 再現方法 >>
+
+（再現しやすいように順序を明記していただけると助かります。関連するソースコードは可能な限り添付ファイルでアップロードしてください。）","<< 개요 >>
+
+( 기능에 관한 문의의 경우, 해당 기능의 사용 용도와 목적을 구체적으로 기재해 주세요.)
+
+해당 API를 사용할 때 숨기고 싶은 컬럼을 3행 입력했지만, 마지막 행만 적용되었습니다.
+인덱스가 0-5인데, 여러 항목을 숨길 수 없는 건가요?
+
+<< 재현 방법 >>
+
+( 재현이 용이하도록 순서를 명시해 주세요. 관련 소스는 가능한 한 첨부 파일로 업로드해 주세요.)","다음은 일본어를 한국어로 번역한 결과입니다:
+
+<< 개요 >>
+
+(기능에 관한 문의의 경우, 해당 기능의 사용 목적과 목적을 구체적으로 기술해 주십시오.)
+
+해당 API를 사용할 때,
+숨기고 싶은 열을 3행으로 입력했지만, 마지막 행만 적용되었습니다.
+인덱스가 0-5인 경우,
+여러 항목을 숨기는 것은 불가능한가요?
+
+<< 재현 방법 >>
+
+(재현하기 쉽도록 순서를 명기해 주시면 감사하겠습니다. 관련된 소스 코드는 가능한 한 첨부 파일로 업로드해 주십시오.)"
+29,[gridView] groupBy() 후 엑셀 다운로드1,"<< 개요 >>
+gridView에서 groupBy()후 해당 그리드데이터를 엑셀 다운로드시 무한로딩 or 무반응
+
+
+
+
+<< 재현 방법 >>
+1) 검색조건의 물품별합계, 창고별합계 선택 - scwin.chk_onchange()
+2) 엑셀버튼 클릭하여 엑셀다운로드 - scwin.fExcelDown()
+
+
+
+
+","안녕하십니까!
+
+그리드 groupby시 엑셀 다운로드를 할때는
+옵션에 groupby=''true' 를 추가해 주시면 될거 같습니다.
+
+-------------------------------------------------------------
+  var options = {};
+  options.fileName = ""excelData.xlsx"";
+  //그리드 그룹바이 옵션 추가
+  options.groupby = ""true"";
+  
+  gridView1.advancedExcelDownload( options );
+-------------------------------------------------------------
+
+소스상에서 공통함수 ef.gridDataDownLoad 함수 안에서 추가해 주신 
+groupby 옵션이 잘 셋팅이 되는지 확인을 해보시기 바랍니다.
+
+그리고 groupby 옵션도 이상이 없는지 확인해 보시면 될거 같습니다.
+
+간단한 테스트 샘플을 첨부 전달드립니다.
+
+감사합니다.
+
+
+감사합니다.
+ ",,"<< 概要 >>
+gridViewでgroupBy()を実行した後、該当グリッドデータをエクセルダウンロードすると無限ロードまたは無反応になります。
+
+
+
+
+<< 再現方法 >>
+1) 検索条件の品目別合計、倉庫別合計を選択 - scwin.chk_onchange()
+2) エクセルボタンをクリックしてエクセルダウンロード - scwin.fExcelDown()","<< 概要 >>
+gridViewでgroupBy()を実行した後、該当のグリッドデータをエクセルダウンロードする際に無限ローディングまたは無反応が発生する問題
+
+<< 再現方法 >>
+1) 検索条件の「商品別合計」、「倉庫別合計」を選択 - scwin.chk_onchange()
+2) エクセルボタンをクリックしてエクセルダウンロードを実行 - scwin.fExcelDown()","<< 개요 >>
+gridView에서 groupBy()를 실행한 후, 해당 그리드 데이터를 엑셀 다운로드하면 무한 로드 또는 무반응이 됩니다.
+
+<< 재현 방법 >>
+1) 검색 조건의 품목별 합계, 창고별 합계를 선택 - scwin.chk_onchange()
+2) 엑셀 버튼을 클릭하여 엑셀 다운로드 - scwin.fExcelDown()","다음은 일본어를 한국어로 번역한 결과입니다:
+
+<< 개요 >>
+gridView에서 groupBy()를 실행한 후, 해당 그리드 데이터를 엑셀 다운로드할 때 무한 로딩 또는 무반응이 발생하는 문제
+
+<< 재현 방법 >>
+1) 검색 조건의 ""상품별 합계"", ""창고별 합계""를 선택 - scwin.chk_onchange()
+2) 엑셀 버튼을 클릭하여 엑셀 다운로드를 실행 - scwin.fExcelDown()"
+30,DataList 데이터를 Gridview로 보여줄 때 행과 열 변경하는 방법 문의3,"<< 개요 >>
+
+간단하게 예시를 하나 들겠습니다.
+[
+    {'id': 'testID1', name: 'testName1', cont1: 'testCont1-1', cont2: 'testCont2-1'},
+    {'id': 'testID2', name: 'testName2', cont1: 'testCont1-2', cont2: 'testCont2-2'},
+    {'id': 'testID3', name: 'testName3', cont1: 'testCont1-3', cont2: 'testCont2-3'},
+    {'id': 'testID4', name: 'testName4', cont1: 'testCont1-4', cont2: 'testCont2-4'},
+    {'id': 'testID5', name: 'testName5', cont1: 'testCont1-5', cont2: 'testCont2-5'},
+    {'id': 'testID6', name: 'testName6', cont1: 'testCont1-6', cont2: 'testCont2-6'},
+]
+
+이런 데이터를 DataList에 담았습니다.
+그리고 저는 gridview로 이렇게 그리고 싶습니다.
+    testName1 testName2 testName3 testName4 testName5 testName6
+ID testID1 testID2 testID3 testID4 testID5 testID6
+CONT1 testCont1-1 testCont1-2 testCont1-3 testCont1-4 testCont1-5 testCont1-6
+CONT2 testCont2-1 testCont2-2 testCont2-3 testCont2-4 testCont2-5 testCont2-6
+
+일반적인 gridview로 datalist에 세팅 후 그릴 때는 위쪽 header엔 해당datalist의 key가 세팅되어 row단위로 데이터가 세팅되는데 전 컬럼 단위로 세팅되게 하고 싶습니다.
+
+방법이 있다면 알려주셨으면 합니다.
+
+
+
+<< 재현 방법 >>
+
+( 재현이 쉽도록 순서를 명시하여 주시면 좋습니다. 관련 소스는 가급적 첨부파일로 올려 주시기 바랍니다.)
+
+
+
+","안녕하세요.
+
+말씀해주신 컬럼 단위로 설정하는 방법은 지원하지않습니다.
+
+감사합니다.",,"<< 概要 >>
+
+簡単に例を一つ挙げます。
+[
+    {'id': 'testID1', name: 'testName1', cont1: 'testCont1-1', cont2: 'testCont2-1'},
+    {'id': 'testID2', name: 'testName2', cont1: 'testCont1-2', cont2: 'testCont2-2'},
+    {'id': 'testID3', name: 'testName3', cont1: 'testCont1-3', cont2: 'testCont2-3'},
+    {'id': 'testID4', name: 'testName4', cont1: 'testCont1-4', cont2: 'testCont2-4'},
+    {'id': 'testID5', name: 'testName5', cont1: 'testCont1-5', cont2: 'testCont2-5'},
+    {'id': 'testID6', name: 'testName6', cont1: 'testCont1-6', cont2: 'testCont2-6'},
+]
+
+このようなデータをDataListに入れました。
+そして、私はgridviewでこのように描画したいです。
+    testName1 testName2 testName3 testName4 testName5 testName6
+ID testID1 testID2 testID3 testID4 testID5 testID6
+CONT1 testCont1-1 testCont1-2 testCont1-3 testCont1-4 testCont1-5 testCont1-6
+CONT2 testCont2-1 testCont2-2 testCont2-3 testCont2-4 testCont2-5 testCont2-6
+
+一般的なgridviewでdatalistに設定後描画する際、上部のヘッダーには該当datalistのキーが設定され、行単位でデータが設定されますが、私は列単位で設定されるようにしたいです。
+
+方法があれば教えていただけますか。
+
+
+
+<< 再現方法 >>
+
+（再現が容易になるように順序を明示していただけると助かります。関連ソースは可能な限り添付ファイルでアップロードしてください。）","<< 概要 >>
+
+簡単に例を一つ挙げます。
+[
+    {'id': 'testID1', name: 'testName1', cont1: 'testCont1-1', cont2: 'testCont2-1'},
+    {'id': 'testID2', name: 'testName2', cont1: 'testCont1-2', cont2: 'testCont2-2'},
+    {'id': 'testID3', name: 'testName3', cont1: 'testCont1-3', cont2: 'testCont2-3'},
+    {'id': 'testID4', name: 'testName4', cont1: 'testCont1-4', cont2: 'testCont2-4'},
+    {'id': 'testID5', name: 'testName5', cont1: 'testCont1-5', cont2: 'testCont2-5'},
+    {'id': 'testID6', name: 'testName6', cont1: 'testCont1-6', cont2: 'testCont2-6'},
+]
+
+このようなデータをDataListに格納しました。
+そして、私はgridviewでこのように描画したいです。
+    testName1 testName2 testName3 testName4 testName5 testName6
+ID testID1 testID2 testID3 testID4 testID5 testID6
+CONT1 testCont1-1 testCont1-2 testCont1-3 testCont1-4 testCont1-5 testCont1-6
+CONT2 testCont2-1 testCont2-2 testCont2-3 testCont2-4 testCont2-5 testCont2-6
+
+一般的なgridviewでdatalistにセットして描画する場合、上部のヘッダーには該当datalistのキーがセットされ、行単位でデータがセットされますが、私は列単位でセットされるようにしたいです。
+
+方法があれば教えていただきたいです。
+
+<< 再現方法 >>
+
+（再現が容易になるよう、順序を明記していただけると助かります。関連ソースはできるだけ添付ファイルでアップロードしてください。）","<< 개요 >>
+
+간단히 예를 하나 들겠습니다.
+[
+    {'id': 'testID1', name: 'testName1', cont1: 'testCont1-1', cont2: 'testCont2-1'},
+    {'id': 'testID2', name: 'testName2', cont1: 'testCont1-2', cont2: 'testCont2-2'},
+    {'id': 'testID3', name: 'testName3', cont1: 'testCont1-3', cont2: 'testCont2-3'},
+    {'id': 'testID4', name: 'testName4', cont1: 'testCont1-4', cont2: 'testCont2-4'},
+    {'id': 'testID5', name: 'testName5', cont1: 'testCont1-5', cont2: 'testCont2-5'},
+    {'id': 'testID6', name: 'testName6', cont1: 'testCont1-6', cont2: 'testCont2-6'},
+]
+
+이러한 데이터를 DataList에 넣었습니다.
+그리고, 저는 gridview에서 이렇게 그리기를 원합니다.
+    testName1 testName2 testName3 testName4 testName5 testName6
+ID testID1 testID2 testID3 testID4 testID5 testID6
+CONT1 testCont1-1 testCont1-2 testCont1-3 testCont1-4 testCont1-5 testCont1-6
+CONT2 testCont2-1 testCont2-2 testCont2-3 testCont2-4 testCont2-5 testCont2-6
+
+일반적인 gridview에서 datalist에 설정 후 그릴 때, 상단의 헤더에는 해당 datalist의 키가 설정되고, 행 단위로 데이터가 설정되지만, 저는 열 단위로 설정되도록 하고 싶습니다.
+
+방법이 있으면 알려주시겠습니까?
+
+
+
+<< 재현 방법 >>
+
+(재현이 용이하도록 순서를 명시해 주시면 도움이 됩니다. 관련 소스는 가능한 한 첨부 파일로 업로드해 주십시오.)","<< 개요 >>
+
+간단히 예를 하나 들겠습니다.
+[
+    {'id': 'testID1', name: 'testName1', cont1: 'testCont1-1', cont2: 'testCont2-1'},
+    {'id': 'testID2', name: 'testName2', cont1: 'testCont1-2', cont2: 'testCont2-2'},
+    {'id': 'testID3', name: 'testName3', cont1: 'testCont1-3', cont2: 'testCont2-3'},
+    {'id': 'testID4', name: 'testName4', cont1: 'testCont1-4', cont2: 'testCont2-4'},
+    {'id': 'testID5', name: 'testName5', cont1: 'testCont1-5', cont2: 'testCont2-5'},
+    {'id': 'testID6', name: 'testName6', cont1: 'testCont1-6', cont2: 'testCont2-6'},
+]
+
+이와 같은 데이터를 DataList에 저장했습니다.
+그리고 저는 gridview에서 이렇게 렌더링하고 싶습니다.
+    testName1 testName2 testName3 testName4 testName5 testName6
+ID testID1 testID2 testID3 testID4 testID5 testID6
+CONT1 testCont1-1 testCont1-2 testCont1-3 testCont1-4 testCont1-5 testCont1-6
+CONT2 testCont2-1 testCont2-2 testCont2-3 testCont2-4 testCont2-5 testCont2-6
+
+일반적인 gridview에서 datalist를 설정하여 렌더링할 경우, 상단 헤더에는 해당 datalist의 키가 설정되고 행 단위로 데이터가 설정되지만, 저는 열 단위로 설정되도록 하고 싶습니다.
+
+방법이 있다면 알려주시면 감사하겠습니다.
+
+<< 재현 방법 >>
+
+(재현이 쉽도록 순서를 명시해 주시면 도움이 됩니다. 관련 소스는 가능한 첨부 파일로 업로드해 주세요.)"
+31,gridView fixedColumn 문의1,"<< 개요 >>
+
+gridView 에 바인딩하는 10개의 컬럼중 앞에 3개의 컬럼과 뒤에 3개의 컬럼을 고정하고 싶은데 방법이 있는지 문의 드립니다.
+
+
+
+<< 재현 방법 >>
+
+( 재현이 쉽도록 순서를 명시하여 주시면 좋습니다. 관련 소스는 가급적 첨부파일로 올려 주시기 바랍니다.)
+
+
+
+","안녕하세요.
+
+해당 gridView에 fixedColumn, fixedRightColumn 속성을 설정해주시면 됩니다.
+
+// 속성 설정 예시
+<w2:gridView fixedColumn=""3"" fixedRightColumn=""3"" ....
+
+추가로 프로젝트명 기입 부탁드립니다.
+감사합니다.",,"<< 概要 >>
+
+gridViewにバインドする10個のカラムのうち、前の3つのカラムと後ろの3つのカラムを固定したいのですが、方法があるかお問い合わせします。
+
+
+
+<< 再現方法 >>
+
+（再現が簡単になるように順序を明示していただけると助かります。関連ソースはできるだけ添付ファイルでアップロードしてください。）","<< 概要 >>
+
+gridViewにバインドする10個のカラムのうち、前の3つのカラムと後ろの3つのカラムを固定したいのですが、その方法について問い合わせいたします。
+
+<< 再現方法 >>
+
+（再現しやすいように順序を明記していただけると助かります。関連するソースコードは可能な限り添付ファイルでアップロードしていただくようお願いいたします。）","<< 개요 >>
+
+gridView에 바인딩된 10개의 컬럼 중 앞의 3개 컬럼과 뒤의 3개 컬럼을 고정하고 싶은데, 방법이 있는지 문의드립니다.
+
+
+
+<< 재현 방법 >>
+
+(재현이 간단해지도록 순서를 명시해 주시면 도움이 됩니다. 관련 소스는 가능한 첨부 파일로 업로드해 주세요.)","<< 개요 >>
+
+gridView에 바인딩하는 10개의 컬럼 중 앞쪽 3개 컬럼과 뒤쪽 3개 컬럼을 고정하고 싶은데, 그 방법에 대해 문의드립니다.
+
+<< 재현 방법 >>
+
+(재현하기 쉽도록 순서를 명시해 주시면 감사하겠습니다. 관련 소스 코드는 가능한 한 첨부 파일로 업로드해 주시기 바랍니다.)"
+32,gridview 헤더에 filter 변경 시 이벤트 캐치 방법1,"<< 개요 >>
+
+안녕하세요. 
+
+gridview 에서 useflterlist를 이용해서 헤더에 filter를 사용하고 있습니다. 
+
+현재 그리드에 조회된 총 개수를 보여주고 있는데....
+
+이 필터가 바뀌면 바뀌었다는 이벤트를 캐치하여 그때 다시 그리드에 조회된 개수를 변경해주고 싶은데....
+
+이 필터가 변경되었다 는걸 어떻게 캐치할 수 잇을까요? 이벤트 목록에 따로 없는거 같아서..여쭤봅니다
+
+
+
+<< 재현 방법 >>
+
+( 재현이 쉽도록 순서를 명시하여 주시면 좋습니다. 관련 소스는 가급적 첨부파일로 올려 주시기 바랍니다.)
+
+
+
+","안녕하세요.
+gridView에 header Filter를 제어하는 이벤트는 현재 지원하지 않으므로, 
+필터가 적용되어 dataList의 값이 변경되는 것을 체크하는 로직으로 구현하시면 될듯합니다.
+dataList의 onbeforecolumnfilterchange 이벤트를 사용해보시기 바랍니다.
+
+감사합니다.",,"<< 概要 >>
+
+こんにちは。
+
+gridviewでusefilterlistを利用してヘッダーにフィルターを使用しています。
+
+現在、グリッドに表示されている総数を表示していますが...
+
+このフィルターが変更された場合、そのイベントをキャッチして、その時に再度グリッドに表示されている数を変更したいのですが...
+
+このフィルターが変更されたことをどうやってキャッチできますか？イベントリストには特にないようなので、お伺いします。
+
+
+
+<< 再現方法 >>
+
+（再現が簡単になるように順序を明示していただけると助かります。関連ソースはできるだけ添付ファイルでアップロードしてください。）","<< 概要 >>
+
+こんにちは。
+
+gridviewでuseflterlistを使用してヘッダーにフィルターを適用しています。
+
+現在、グリッドに表示されている総件数を表示していますが...
+
+このフィルターが変更されたときにイベントをキャッチして、その時点でグリッドに表示されている件数を更新したいのですが...
+
+このフィルターが変更されたことをどのようにキャッチできるでしょうか？イベントリストに特に記載がないようなので、お聞きしたいと思います。
+
+
+
+<< 再現方法 >>
+
+（再現しやすいように手順を明記していただけると助かります。関連するソースコードは可能な限り添付ファイルでアップロードしてください。）","<< 개요 >>
+
+안녕하세요.
+
+gridview에서 usefilterlist를 이용하여 헤더에 필터를 사용하고 있습니다.
+
+현재 그리드에 표시되고 있는 총수를 표시하고 있습니다만...
+
+이 필터가 변경된 경우, 그 이벤트를 캐치하여 그때 다시 그리드에 표시되고 있는 수를 변경하고 싶습니다만...
+
+이 필터가 변경된 것을 어떻게 캐치할 수 있습니까? 이벤트 리스트에는 특별히 없는 것 같아서 여쭤봅니다.
+
+
+
+<< 재현 방법 >>
+
+(재현이 간단해지도록 순서를 명시해 주시면 도움이 됩니다. 관련 소스는 가능한 첨부 파일로 업로드해 주세요.)","<< 개요 >>
+
+안녕하세요.
+
+gridview에서 usefilterlist를 사용하여 헤더에 필터를 적용하고 있습니다.
+
+현재 그리드에 표시되는 총 건수를 표시하고 있지만...
+
+이 필터가 변경되었을 때 이벤트를 캐치하여 그 시점에 그리드에 표시되는 건수를 업데이트하고 싶습니다만...
+
+이 필터가 변경되었음을 어떻게 캐치할 수 있을까요? 이벤트 리스트에 특별히 기재된 것이 없는 것 같아서 문의드립니다.
+
+
+
+<< 재현 방법 >>
+
+(재현하기 쉽도록 절차를 명확히 기재해 주시면 감사하겠습니다. 관련 소스 코드는 가능한 한 첨부 파일로 업로드해 주세요.)"
+33,gridview 내부 escape 옵션문의3,"<< 개요 >>
+
+( 기능 문의의 경우 해당 기능의 사용 용도와 목적을 구체적으로 기술해 주시기 바랍니다. )
+gridview 내부 inputType이 textImage인 경우
+escape  = true 옵션이 적용이 안되는듯 합니다.
+
+
+입력하면서 포커스시 <PE> 제대로 표기되지만
+
+입력 후에는  <PE> 부분이 태그로 변경되어 사라집니다
+
+다시 선택하면 <PE>부분은 글자로 표기됩니다
+
+버그인지 제가 잘못 사용하고 있는건지 궁금합니다
+
+inputType이 TEXT나 다른타입의 경우  escape  = true 작동 잘 됩니다.
+
+<< 재현 방법 >>
+
+( 재현이 쉽도록 순서를 명시하여 주시면 좋습니다. 관련 소스는 가급적 첨부파일로 올려 주시기 바랍니다.)
+
+
+
+","안녕하세요.
+type이 textImage인 경우 escape=""True""가 적용되지 않는 것을 확인했습니다.
+해당 기능은 22년 7월 이후 엔진에서 개선되었으며, 요청 시 최신 엔진 전달드리도록 하겠습니다.",,"<< 概要 >>
+
+( 機能に関する問い合わせの場合、その機能の使用用途と目的を具体的に記述してください。)
+gridview 内部の inputType が textImage の場合、
+escape = true オプションが適用されていないようです。
+
+入力中にフォーカスが当たると <PE> が正しく表示されますが、
+
+入力後には <PE> 部分がタグに変換されて消えてしまいます。
+
+再度選択すると <PE> 部分は文字として表示されます。
+
+バグなのか、私の使い方が間違っているのか知りたいです。
+
+inputType が TEXT や他のタイプの場合、escape = true は正常に動作します。
+
+<< 再現方法 >>
+
+( 再現が簡単になるように手順を明示してください。関連ソースはできるだけ添付ファイルとしてアップロードしてください。)","<< 概要 >>
+
+（機能に関するお問い合わせの場合は、その機能の使用目的と目的を具体的に記述してください。）
+gridview内のinputTypeがtextImageの場合、
+escape = trueオプションが適用されていないようです。
+
+入力中にフォーカスを合わせると<PE>が正しく表示されますが、
+
+入力後は<PE>部分がタグに変更されて消えてしまいます。
+
+再度選択すると<PE>部分は文字として表示されます。
+
+これがバグなのか、私の使用方法が間違っているのか気になります。
+
+inputTypeがTEXTや他のタイプの場合、escape = trueは正常に動作します。
+
+<< 再現方法 >>
+
+（再現しやすいように順序を明記していただけると助かります。関連するソースはできるだけ添付ファイルでアップロードしてください。）","<< 개요 >>
+
+( 기능에 관한 문의의 경우, 해당 기능의 사용 용도와 목적을 구체적으로 기재해 주세요.)
+gridview 내부의 inputType이 textImage인 경우,
+escape = true 옵션이 적용되지 않는 것 같습니다.
+
+입력 중에 포커스가 맞춰지면 <PE>가 올바르게 표시되지만,
+
+입력 후에는 <PE> 부분이 태그로 변환되어 사라집니다.
+
+다시 선택하면 <PE> 부분이 문자로 표시됩니다.
+
+버그인지, 제 사용 방법이 잘못된 것인지 알고 싶습니다.
+
+inputType이 TEXT나 다른 타입인 경우, escape = true는 정상적으로 동작합니다.
+
+<< 재현 방법 >>
+
+( 재현이 쉽게 되도록 절차를 명시해 주세요. 관련 소스는 가능한 첨부 파일로 업로드해 주세요.)","다음은 일본어를 한국어로 번역한 내용입니다:
+
+<< 개요 >>
+
+(기능에 관한 문의인 경우, 해당 기능의 사용 목적과 용도를 구체적으로 기술해 주세요.)
+gridview 내의 inputType이 textImage인 경우,
+escape = true 옵션이 적용되지 않는 것 같습니다.
+
+입력 중 포커스를 맞추면 <PE>가 올바르게 표시되지만,
+
+입력 후에는 <PE> 부분이 태그로 변경되어 사라집니다.
+
+다시 선택하면 <PE> 부분은 문자로 표시됩니다.
+
+이것이 버그인지, 제 사용 방법이 잘못된 것인지 궁금합니다.
+
+inputType이 TEXT나 다른 타입인 경우, escape = true는 정상적으로 작동합니다.
+
+<< 재현 방법 >>
+
+(재현하기 쉽도록 순서를 명시해 주시면 감사하겠습니다. 관련 소스는 가능한 한 첨부 파일로 업로드해 주세요.)"
+34,"GridView 셀값이 ""0""->""""로 변경될 때 rowStatus가 변경되지 않는 문제2","<< 개요 >>
+
+( 기능 문의의 경우 해당 기능의 사용 용도와 목적을 구체적으로 기술해 주시기 바랍니다. )
+
+GridView 셀의 값이 0인 상태에서 0을 지우고 빈 셀로 만들면 rowStatus가 'U'로 변경되지 않고 'R'로 유지되는 현상이 있습니다.
+1. DataList 컬럼의 ignoreStatus = false인 상태
+2. DataList 컬럼의 dataType = text, GridView의 셀 property에서 dataType = text인 경우
+3. DataList 컬럼의 dataType = number, GridView의 셀 property에서 dataType = number인 경우
+1~3의 조건에서 동일한 현상이 발생합니다.
+셀의 값이 ""0"" -> """"으로 변경됐지만 rowStatus가 변경되지 않아 변경값의 유효성 체크에 어려움이 있는데
+이 경우 rowStatus가 변경되지 않는 건 의도적인 건가요? 별도의 체크 로직을 작성해야 할지 아니면 다른 property 등 설정값 변경으로 해결할 수 있는지 문의드립니다.
+
+
+
+
+<< 재현 방법 >>
+
+( 재현이 쉽도록 순서를 명시하여 주시면 좋습니다. 관련 소스는 가급적 첨부파일로 올려 주시기 바랍니다.)
+
+
+
+","안녕하십니까!
+
+해당버전에서 테스트 결과 이상이 없어보입니다.
+테스트한 샘플 파일을 첨부하니 테스트 해 보시기 바랍니다.
+
+1. 그리드 셀의 값을 0 으로 셋팅
+2. 그리드 셀의 값 0 을 삭제 """" 스트링으로 변경
+3. 해당 행의 상태가 U로 변경됨
+
+테스트 방법이 틀리거나 추가 문의 사항이 있으면 회신부탁드립니다.
+감사합니다.샘플파일이 첨부가 안되서 텍스트로 답변 드립니다.
+-------------------------------------------------------------------
+
+<w2:dataCollection baseNode=""map"">
+                <w2:dataList baseNode=""list"" repeatNode=""map"" id=""dataList1"" saveRemovedData=""true"">
+                    <w2:columnInfo>
+                        <w2:column id=""col1"" name=""name1"" dataType=""text"" ignoreStatus=""false""></w2:column>
+                        <w2:column id=""col2"" name=""name2"" dataType=""number"" ignoreStatus=""false""></w2:column>
+                        <w2:column id=""col3"" name=""name3"" dataType=""text""></w2:column>
+                    </w2:columnInfo>
+                    <w2:data use=""true"">
+                        <w2:row>
+                            <col1><![CDATA[0]]></col1>
+                            <col2><![CDATA[0]]></col2>
+                        </w2:row>
+                        <w2:row>
+                            <col2><![CDATA[0]]></col2>
+                            <col1><![CDATA[0]]></col1>
+                        </w2:row>
+                        <w2:row></w2:row>
+                    </w2:data>
+                </w2:dataList>
+            </w2:dataCollection>
+
+<w2:gridView id="""" ignoreToggleOnDisabled=""false"" useShiftKey=""true""
+            style=""position: absolute ;left: 66px;top: 77px;width: 617px;height: 278px;"" useFilterList=""false"" scrollByColumn=""false""
+            showSortableUseFilter=""false"" scrollByColumnAdaptive=""false"" summaryAuto=""false"" fixedColumnWithHidden=""true"" summaryOnlyAuto=""false""
+            dataList=""dataList1"" ignoreCellClick=""false"" rowStatusVisible=""true"" rowStatusHeaderValue=""상태"">
+            <w2:caption style="""" id=""caption1"" value=""this is a grid caption.""></w2:caption>
+            <w2:header style="""" id=""header1"">
+                <w2:row style="""" id=""row1"">
+                    <w2:column width=""70"" inputType=""text"" style=""height:20px;"" id=""column5"" blockSelect=""false"" displayMode=""label""
+                        value=""text"">
+                    </w2:column>
+                    <w2:column width=""70"" inputType=""text"" style=""height:20px;"" id=""column3"" blockSelect=""false"" displayMode=""label""
+                        value=""number"">
+                    </w2:column>
+                    <w2:column width=""70"" inputType=""text"" style=""height:20px;"" id=""column1"" blockSelect=""false"" displayMode=""label""
+                        value=""name3"">
+                    </w2:column>
+                </w2:row>
+            </w2:header>
+            <w2:gBody style="""" id=""gBody1"">
+                <w2:row style="""" id=""row2"">
+                    <w2:column width=""70"" inputType=""text"" style=""height:20px"" id=""col1"" blockSelect=""false"" displayMode=""label"" dataType=""text""></w2:column>
+                    <w2:column width=""70"" inputType=""text"" style=""height:20px"" id=""col2"" blockSelect=""false"" displayMode=""label"" dataType=""number""></w2:column>
+                    <w2:column width=""70"" inputType=""text"" style=""height:20px"" id=""col3"" blockSelect=""false"" displayMode=""label""></w2:column>
+                </w2:row>
+            </w2:gBody>
+        </w2:gridView>
+
+
+
+-------------------------------------------------------------------",,"<< 概要 >>
+
+( 機能に関する問い合わせの場合、その機能の使用用途と目的を具体的に記述してください。)
+
+GridViewセルの値が0の状態で0を消して空のセルにすると、rowStatusが'U'に変更されずに'R'のままになる現象があります。
+1. DataListカラムのignoreStatus = falseの状態
+2. DataListカラムのdataType = text、GridViewのセルプロパティでdataType = textの場合
+3. DataListカラムのdataType = number、GridViewのセルプロパティでdataType = numberの場合
+1～3の条件で同じ現象が発生します。
+セルの値が""0"" -> """"に変更されましたが、rowStatusが変更されず、変更値の有効性チェックが難しいのですが、
+この場合、rowStatusが変更されないのは意図的なものですか？別途チェックロジックを作成する必要があるのか、それとも他のプロパティなど設定値の変更で解決できるのか問い合わせいたします。
+
+
+
+
+<< 再現方法 >>
+
+( 再現が容易になるように順序を明示してください。関連ソースはできるだけ添付ファイルでアップロードしてください。)","<< 概要 >>
+
+（機能に関するお問い合わせの場合は、その機能の使用目的と目的を具体的に記述してください。）
+
+GridViewのセルの値が0の状態で0を消して空のセルにすると、rowStatusが'U'に変更されず'R'のままになる現象があります。
+1. DataListカラムのignoreStatus = falseの状態
+2. DataListカラムのdataType = text、GridViewのセルプロパティでdataType = textの場合
+3. DataListカラムのdataType = number、GridViewのセルプロパティでdataType = numberの場合
+1〜3の条件で同じ現象が発生します。
+セルの値が""0"" -> """"に変更されましたが、rowStatusが変更されないため、変更値の有効性チェックが困難です。
+この場合、rowStatusが変更されないのは意図的なものでしょうか？別途チェックロジックを作成する必要があるのか、それとも他のプロパティなどの設定値変更で解決できるのかお問い合わせいたします。
+
+
+
+
+<< 再現方法 >>
+
+（再現しやすいように順序を明記していただけると助かります。関連ソースはできるだけ添付ファイルでアップロードしてください。）","<< 개요 >>
+
+( 기능에 관한 문의의 경우, 해당 기능의 사용 용도와 목적을 구체적으로 기재해 주십시오.)
+
+GridView 셀의 값이 0인 상태에서 0을 지우고 빈 셀로 만들면, rowStatus가 'U'로 변경되지 않고 'R'인 상태로 남아 있는 현상이 있습니다.
+1. DataList 컬럼의 ignoreStatus = false 상태
+2. DataList 컬럼의 dataType = text, GridView의 셀 프로퍼티에서 dataType = text인 경우
+3. DataList 컬럼의 dataType = number, GridView의 셀 프로퍼티에서 dataType = number인 경우
+1~3의 조건에서 동일한 현상이 발생합니다.
+셀의 값이 ""0"" -> """"로 변경되었지만, rowStatus가 변경되지 않아 변경 값의 유효성 체크가 어려운데,
+이 경우, rowStatus가 변경되지 않는 것이 의도된 것인지요? 별도의 체크 로직을 작성해야 하는지, 아니면 다른 프로퍼티 등의 설정 값 변경으로 해결할 수 있는지 문의드립니다.
+
+
+
+
+<< 재현 방법 >>
+
+( 재현이 용이하도록 순서를 명시해 주십시오. 관련 소스는 가능한 첨부 파일로 업로드해 주십시오.)","<< 개요 >>
+
+(기능에 관한 문의의 경우, 해당 기능의 사용 목적과 목적을 구체적으로 기술해 주세요.)
+
+GridView의 셀 값이 0인 상태에서 0을 지우고 빈 셀로 만들면, rowStatus가 'U'로 변경되지 않고 'R' 상태로 유지되는 현상이 있습니다.
+1. DataList 컬럼의 ignoreStatus = false 상태
+2. DataList 컬럼의 dataType = text, GridView의 셀 속성에서 dataType = text인 경우
+3. DataList 컬럼의 dataType = number, GridView의 셀 속성에서 dataType = number인 경우
+1~3의 조건에서 동일한 현상이 발생합니다.
+셀의 값이 ""0"" -> """"로 변경되었지만, rowStatus가 변경되지 않아 변경 값의 유효성 검사가 어렵습니다.
+이 경우, rowStatus가 변경되지 않는 것이 의도적인 것인지요? 별도의 체크 로직을 만들어야 하는지, 아니면 다른 속성 등의 설정값 변경으로 해결할 수 있는지 문의드립니다.
+
+
+
+
+<< 재현 방법 >>
+
+(재현하기 쉽도록 순서를 명시해 주시면 감사하겠습니다. 관련 소스는 가능한 첨부 파일로 업로드해 주세요.)"
+35,gridview header 전체선택 로직 문의1,"<< 개요 >>
+
+gridview header 컬럼의 inputType을 checkbox로 설정해 전체선택을 할 수 있도록 개발중에 있습니다.
+
+gridview를 이용해 개발을 하다보면 로직상 전체선택을 막아야 하는 경우가 있습니다. (ex. 특정 column값이 비어있는 경우)
+클릭 이벤트의 반환값으로 이벤트 객체가 넘어오는 경우 preventDefault 함수를 이용해 특정 이벤트를 막는 것으로 알고 있지만, onheaderclick의 반환값으로 headerId만 넘어와 preventDefault 함수를 쓸 수 없어 특정 조건의 경우 전체선택을 막는 기능을 어떻게 구현해야 할지 잘 모르겠습니다.
+
+혹시 웹스퀘어에서 header의 checkbox를 이용해 전체선택을 하는 경우, checkbox를 클릭했을 때 전체선택을 막을 수 있는 방법이 있을까요?
+( 기능 문의의 경우 해당 기능의 사용 용도와 목적을 구체적으로 기술해 주시기 바랍니다. )
+
+
+
+<< 재현 방법 >>
+
+[원하는 기능]
+1. header의 checkbox를 클릭해 gridview 데이터 전체 선택을 시도한다.
+2. 조건에 따라 전체선택이 가능한 경우와 불가능한 경우 로직을 분기한다.
+2-1: 전체선택이 가능한 경우
+- 기존 로직과 동일하게 전체선택이 된다.
+2-2: 전체선택이 가능하지 않은 경우(ex. gridview에 바인딩 된 datalist를 확인해 특정 컬럼에 값이 없는 경우)
+- 전체선택을 막는다.
+
+( 재현이 쉽도록 순서를 명시하여 주시면 좋습니다. 관련 소스는 가급적 첨부파일로 올려 주시기 바랍니다.)
+
+
+
+","안녕하세요.
+
+checkbox 컬럼에 true 값을 체크하여 true 값이 있는 경우, setHeaderDisabled(); true 적용한 테스트 파일 첨부드립니다.
+테스트 파일 확인부탁드립니다.
+
+감사합니다.",,"<< 概要 >>
+
+gridviewのヘッダー列のinputTypeをcheckboxに設定し、全選択ができるように開発中です。
+
+gridviewを利用して開発を進める中で、ロジック上全選択を防がなければならない場合があります。（例：特定のカラム値が空の場合）
+クリックイベントの戻り値としてイベントオブジェクトが渡される場合、preventDefault関数を利用して特定のイベントを防ぐことができると認識していますが、onheaderclickの戻り値としてheaderIdのみが渡され、preventDefault関数を使用できないため、特定の条件の場合に全選択を防ぐ機能をどのように実装すればよいか分かりません。
+
+もしウェブスクエアでヘッダーのcheckboxを利用して全選択を行う場合、checkboxをクリックした際に全選択を防ぐ方法はありますか？
+（機能に関する問い合わせの場合、該当機能の使用用途と目的を具体的に記述してください。）
+
+
+
+<< 再現方法 >>
+
+[望む機能]
+1. ヘッダーのcheckboxをクリックしてgridviewデータを全選択しようとする。
+2. 条件に応じて全選択が可能な場合と不可能な場合のロジックを分岐する。
+2-1: 全選択が可能な場合
+- 既存のロジックと同様に全選択が行われる。
+2-2: 全選択が不可能な場合（例：gridviewにバインディングされたdatalistを確認し、特定のカラムに値がない場合）
+- 全選択を防ぐ。
+
+（再現が容易になるように順序を明示してください。関連ソースは可能な限り添付ファイルとしてアップロードしてください。）","<< 概要 >>
+
+gridviewのヘッダーカラムのinputTypeをcheckboxに設定し、全選択ができるように開発中です。
+
+gridviewを使用して開発を進めていると、ロジック上、全選択を防ぐ必要がある場合があります（例：特定のカラム値が空の場合）。
+クリックイベントの戻り値としてイベントオブジェクトが渡される場合、preventDefault関数を使用して特定のイベントを防ぐことができると理解していますが、onheaderclickの戻り値としてheaderIdのみが渡されるため、preventDefault関数を使用できず、特定の条件の場合に全選択を防ぐ機能をどのように実装すべきか分かりません。
+
+ウェブスクエアでヘッダーのチェックボックスを使用して全選択を行う場合、チェックボックスをクリックしたときに全選択を防ぐ方法はありますか？
+（機能に関する問い合わせの場合は、その機能の使用目的と目的を具体的に記述してください。）
+
+<< 再現方法 >>
+
+[希望する機能]
+1. ヘッダーのチェックボックスをクリックしてgridviewデータの全選択を試みる。
+2. 条件に応じて全選択が可能な場合と不可能な場合のロジックを分岐する。
+2-1: 全選択が可能な場合
+- 既存のロジックと同様に全選択が行われる。
+2-2: 全選択が不可能な場合（例：gridviewにバインドされたdatalistを確認し、特定のカラムに値がない場合）
+- 全選択を防ぐ。
+
+（再現しやすいように順序を明記していただけると助かります。関連するソースは可能な限り添付ファイルでアップロードしてください。）","<< 개요 >>
+
+gridview의 헤더 열의 inputType을 checkbox로 설정하여 전체 선택이 가능하도록 개발 중입니다.
+
+gridview를 이용해 개발을 진행하는 중에, 로직상 전체 선택을 방지해야 하는 경우가 있습니다. (예: 특정 컬럼 값이 비어 있는 경우)
+클릭 이벤트의 반환 값으로 이벤트 객체가 전달되는 경우, preventDefault 함수를 이용해 특정 이벤트를 방지할 수 있다고 알고 있지만, onheaderclick의 반환 값으로 headerId만 전달되어 preventDefault 함수를 사용할 수 없기 때문에, 특정 조건의 경우 전체 선택을 방지하는 기능을 어떻게 구현해야 할지 모르겠습니다.
+
+만약 웹스퀘어에서 헤더의 checkbox를 이용해 전체 선택을 수행하는 경우, checkbox를 클릭했을 때 전체 선택을 방지하는 방법이 있습니까?
+(기능에 관한 문의인 경우, 해당 기능의 사용 용도와 목적을 구체적으로 기재해 주십시오.)
+
+<< 재현 방법 >>
+
+[원하는 기능]
+1. 헤더의 checkbox를 클릭하여 gridview 데이터를 전체 선택하려고 한다.
+2. 조건에 따라 전체 선택이 가능한 경우와 불가능한 경우의 로직을 분기한다.
+2-1: 전체 선택이 가능한 경우
+- 기존 로직과 동일하게 전체 선택이 이루어진다.
+2-2: 전체 선택이 불가능한 경우 (예: gridview에 바인딩된 datalist를 확인하여 특정 컬럼에 값이 없는 경우)
+- 전체 선택을 방지한다.
+
+(재현이 용이하도록 순서를 명시해 주십시오. 관련 소스는 가능한 한 첨부 파일로 업로드해 주십시오.)","<< 개요 >>
+
+gridview의 헤더 컬럼의 inputType을 checkbox로 설정하여 전체 선택이 가능하도록 개발 중입니다.
+
+gridview를 사용하여 개발을 진행하다 보면 로직상 전체 선택을 방지해야 하는 경우가 있습니다(예: 특정 컬럼 값이 비어있는 경우).
+클릭 이벤트의 반환값으로 이벤트 객체가 전달되는 경우, preventDefault 함수를 사용하여 특정 이벤트를 방지할 수 있다고 이해하고 있지만, onheaderclick의 반환값으로 headerId만 전달되기 때문에 preventDefault 함수를 사용할 수 없어 특정 조건일 때 전체 선택을 방지하는 기능을 어떻게 구현해야 할지 모르겠습니다.
+
+웹스퀘어에서 헤더의 체크박스를 사용하여 전체 선택을 할 때, 체크박스를 클릭했을 때 전체 선택을 방지하는 방법이 있나요?
+(기능에 대한 문의일 경우 해당 기능의 사용 목적과 목적을 구체적으로 기술해 주세요.)
+
+<< 재현 방법 >>
+
+[희망하는 기능]
+1. 헤더의 체크박스를 클릭하여 gridview 데이터의 전체 선택을 시도합니다.
+2. 조건에 따라 전체 선택이 가능한 경우와 불가능한 경우의 로직을 분기합니다.
+2-1: 전체 선택이 가능한 경우
+- 기존 로직과 동일하게 전체 선택이 이루어집니다.
+2-2: 전체 선택이 불가능한 경우(예: gridview에 바인딩된 datalist를 확인하여 특정 컬럼에 값이 없는 경우)
+- 전체 선택을 방지합니다.
+
+(재현하기 쉽도록 순서를 명시해 주시면 감사하겠습니다. 관련 소스는 가능한 한 첨부 파일로 업로드해 주세요.)"
