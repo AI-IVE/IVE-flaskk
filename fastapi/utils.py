@@ -54,7 +54,7 @@ def api_claude_native(system_prompt, text, model="claude-3-sonnet", verbose=Fals
 
     retry_count = 0
     delay = initial_delay
-    print("model11111",model)
+    
     while retry_count < max_retries:
         try:
             message = client_anthropic.messages.create(

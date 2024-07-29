@@ -20,3 +20,7 @@ langchain-openai
 langchain-aws
 langchain
 python-dotenv
+
+#fastapi 관련
+fastapi
+uvicorn[standard]
